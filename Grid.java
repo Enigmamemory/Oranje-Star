@@ -5,6 +5,6 @@ public class Grid {
     
     Grid(){
       Length = 1; Width = 1;
-      Board = Boxes [][]; 
+      Board = Boxes [Length][Width]; 
     }
   }
