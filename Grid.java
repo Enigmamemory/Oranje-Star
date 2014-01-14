@@ -4,7 +4,11 @@ public class Grid {
     Boxes [][] Board;
     
     Grid(){
-      Length = 1; Width = 1;
-      Board = Boxes [Length][Width]; 
+        Length = 1; Width = 1;
+        Board = Boxes [Length][Width]; 
+    }
+    Grid(int x, int y){
+        Length = x; Width = y;
+        Board = Boxes [Length][Width]
     }
   }
