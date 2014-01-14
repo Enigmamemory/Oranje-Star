@@ -1,4 +1,5 @@
 public abstract class Unit{
+    boolean moved;
     int movespace;
     int attack;
     int HP;
