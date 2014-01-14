@@ -5,4 +5,7 @@ public class Boxes {
     Boxes(){
       ;
     }
+    boolean isUnitThere? (){
+        return Fodder = null;
+    }    
   } 
