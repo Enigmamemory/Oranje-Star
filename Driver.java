@@ -1,5 +1,6 @@
 public class Driver{
   public static void main(String [] Args){
-    System.out.println("HAHAHAHHAHAHAHAHAH");
+    Grid Field = new Grid();
+    System.out.println(Field);
   }
 }  
