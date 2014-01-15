@@ -1,4 +1,4 @@
-public abstract class Unit{
+public class Unit{
     boolean moved;
     int movespace;
     int attack;
