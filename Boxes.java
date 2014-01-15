@@ -5,7 +5,10 @@ public class Boxes {
     Boxes(){
       ;
     }
-    boolean isUnitThere? (){
+    private boolean isUnitThere? (){
         return Fodder = null;
-    }    
+    } 
+    public string toString (){
+        return "" + Floor.getname();
+    }
   } 
