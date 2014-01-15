@@ -11,4 +11,10 @@ public class Grid {
         Length = x; Width = y;
         Board = Boxes [Length][Width]
     }
+    public string toString{
+        String all = "";
+        for (Boxes x: Board){
+            all += x;
+        }
+    }
   }
