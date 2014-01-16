@@ -4,7 +4,7 @@ public class Unit{
     int attack;
     int HP;
     int def;
-    int mimrange;
+    int minrange;
     int maxrange;
     int xcoord;
     int ycoord;
@@ -17,7 +17,7 @@ public class Unit{
     public int [] move(){
       int [] coordinate = new int [2];
       coordinate[0] = xcoord; coordinate[1] = ycoord;
-      ;
-      return 
+      return coordinate; 
     }
     
+}

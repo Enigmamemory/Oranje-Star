@@ -5,16 +5,19 @@ public class Grid {
     
     Grid(){
         Length = 1; Width = 1;
-        Board = Boxes [Length][Width]; 
+        Board = new Boxes [Length][Width]; 
     }
     Grid(int x, int y){
         Length = x; Width = y;
-        Board = Boxes [Length][Width]
+        Board = new Boxes [Length][Width];
     }
-    public string toString{
+    public String toString() {
         String all = "";
-        for (Boxes x: Board){
-            all += x;
-        }
+        for (int x = 0; x < Board.length ; x++){
+	    for (int y = 0 ; y < Board[x].length ; y++){
+		all += Board[x][y];
+	    }
+	}
+	return all;
     }
-  }
+}
