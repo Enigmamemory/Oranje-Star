@@ -19,5 +19,13 @@ public class Unit{
       coordinate[0] = xcoord; coordinate[1] = ycoord;
       return coordinate; 
     }
+
+    public String getUnit(){
+	return name;
+    }
+
+    public String toString(){
+	return getUnit();
+    }
     
 }

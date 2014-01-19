@@ -1,13 +1,17 @@
 public class Terrain {
 
-    String name;
+    private String name;
     
     Terrain(){
-    	name = "Plain";
+    	name = "Plain ";
     }
 
-    public String getName(){
+    public String getTerrain(){
 	return name;
+    }
+
+    public String toString(){
+	return getTerrain();
     }
 
 }

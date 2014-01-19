@@ -11,7 +11,8 @@ public class Boxes {
 	return (Fodder.equals(null));
     } 
     public String toString (){
-        return Floor.getName();
+	String rtnstn = Floor.getName();
+	if (isUnitThere()
     }
     /*ublic void changeUnit(){*/
 	

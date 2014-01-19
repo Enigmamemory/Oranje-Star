@@ -29,8 +29,17 @@ public class Grid {
         String all = "";
         for (int x = 0; x < Board.length ; x++){
 	    for (int y = 0 ; y < Board[x].length ; y++){
-		all += Board[x][y];
+		all += Board[x][y].Floor + " ";
 	    }
+	    all = all.substring(0,all.length()-1);
+	    all += "\n";
+	    for (int z = 0 ; z < Board[x].length ; z++){
+		if (Board[x][z].Fodder != null)
+		    all += Board[x][z].Fodder + " ";
+		else
+		    all += "      ";
+	    }
+	    all = all.substring(0,all.length()-1);
 	    all += "\n";
 	}
 	return all;
