@@ -1,6 +1,6 @@
 public class Grid {
-    int Length;
-    int Width;
+    protected int Length;
+    protected int Width;
     Boxes [][] Board;
     
     Grid(){
@@ -54,7 +54,10 @@ public class Grid {
 	Board[xcoor][ycoor + 1].setUnit(x);
 	Board[xcoor][ycoor] = null;
     }
-
+    public void attack (Unit x, Unit y){
+	int dmg = x.getAttack();
+	y.setHP(y.getHP() - dmg);
+    }
 	
 	
     public String toString() {

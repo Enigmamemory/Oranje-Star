@@ -1,14 +1,14 @@
 public class Unit{
-    boolean moved;
-    int movespace;
-    int attack;
-    int HP;
-    int defense;
-    int minrange;
-    int maxrange;
-    int xcoord;
-    int ycoord;
-    String name;
+    protected boolean moved;
+    protected int movespace;
+    protected int attack;
+    protected int HP;
+    protected int defense;
+    protected int minrange;
+    protected int maxrange;
+    protected int xcoord;
+    protected int ycoord;
+    protected String name;
     
     Unit(){
 	movespace = 1;attack = 1; HP = 10; defense = 1; minrange = 1; maxrange = 1;
@@ -34,6 +34,9 @@ public class Unit{
     public int getycoord(){
 	return ycoord;
     }
+    public int getAttack(){
+	return Attack;
+    }
     public int setxcoord(int x){
 	int xcoor = xcoord;
 	xcoord = x;
@@ -43,6 +46,12 @@ public class Unit{
 	int ycoor = ycoord;
 	ycoord = y;
 	return ycoor;
+    }
+    public void getHP(){
+	return HP;
+    }
+    public void setHP(int x){
+	HP = x;
     }
 
     public String toString(){
