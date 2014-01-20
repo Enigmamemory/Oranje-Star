@@ -10,11 +10,14 @@ public class Boxes {
     public boolean isUnitThere (){
 	return (Fodder.equals(null));
     } 
-    public String toString (){
-	String rtnstn = Floor.getName();
-	if (isUnitThere()
+    public void setUnit (Unit x){
+	Fodder = x;
     }
-    /*ublic void changeUnit(){*/
+    public String toString (){
+	String rtnstn = Floor.getTerrain();
+	return rtnstn;
+    }
+    /*public void changeUnit(){*/
 	
     public static void main (String[] args) {
 	Boxes Test = new Boxes();

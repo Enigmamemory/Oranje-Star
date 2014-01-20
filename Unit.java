@@ -3,7 +3,7 @@ public class Unit{
     int movespace;
     int attack;
     int HP;
-    int def;
+    int defense;
     int minrange;
     int maxrange;
     int xcoord;
@@ -11,17 +11,38 @@ public class Unit{
     String name;
     
     Unit(){
-      movespace = 1;attack = 1; HP = 10; def = 1; minrange = 1; maxrange = 1;
-      name = "Rookie";
+	movespace = 1;attack = 1; HP = 10; defense = 1; minrange = 1; maxrange = 1;
+	name = "Rookie";
+    }
+    Unit(int ms,int att, int H, int def,int min,int max,int x, int y, String N){
+	movespace = ms; attack = att; HP = H;
+	defense = def; minrange = min; maxrange = max;
+	xcoord = x; ycoord = y;
+	name = N;
     }
     public int [] move(){
-      int [] coordinate = new int [2];
-      coordinate[0] = xcoord; coordinate[1] = ycoord;
-      return coordinate; 
+	int [] coordinate = new int [2];
+	coordinate[0] = xcoord; coordinate[1] = ycoord;
+	return coordinate; 
     }
-
     public String getUnit(){
 	return name;
+    }
+    public int getxcoord(){
+	return xcoord; 
+    }
+    public int getycoord(){
+	return ycoord;
+    }
+    public int setxcoord(int x){
+	int xcoor = xcoord;
+	xcoord = x;
+	return xcoor;
+    }
+    public int setycoord(int y){
+	int ycoor = ycoord;
+	ycoord = y;
+	return ycoor;
     }
 
     public String toString(){

@@ -24,6 +24,38 @@ public class Grid {
     public void Place(Unit a, int x, int y) {
 	Board[x][y].Fodder = a;
     }
+    public void moveup (Unit x){
+	int xcoor = x.getxcoord();
+	int ycoor = x.getycoord();
+	x.setycoord(ycoor + 1);
+	Board[xcoor][ycoor + 1].setUnit(x);
+	Board[xcoor][ycoor] = null;
+    }
+    public void moveleft (Unit x){
+	int xcoor = x.getxcoord();
+	int ycoor = x.getycoord();
+	x.setxcoord(xcoor - 1);
+	Board[xcoor - 1][ycoor].setUnit(x);
+	Board[xcoor][ycoor] = null;
+    }
+
+    public void moveright (Unit x){
+	int xcoor = x.getxcoord();
+	int ycoor = x.getycoord();
+	x.setxcoord(xcoor + 1);
+	Board[xcoor + 1][ycoor].setUnit(x);
+	Board[xcoor][ycoor] = null;
+    }
+
+    public void movedown (Unit x){
+	int xcoor = x.getxcoord();
+	int ycoor = x.getycoord();
+	x.setycoord(ycoor - 1);
+	Board[xcoor][ycoor + 1].setUnit(x);
+	Board[xcoor][ycoor] = null;
+    }
+
+	
 	
     public String toString() {
         String all = "";
