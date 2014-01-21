@@ -55,8 +55,16 @@ public class Grid {
 	Board[xcoor][ycoor] = null;
     }
     public void attack (Unit x, Unit y){
-	int dmg = x.getAttack();
-	y.setHP(y.getHP() - dmg);
+	int xdiff = abs((x.getxcoord() - y.getxcoord()));
+	int ydiff = abs((x.getycoord() - y.getycoord()));
+	int diff = xdiff + ydiff;
+	if (diff <= x.getmaxrange && diff >= minrange){
+	    int dmg = x.getAttack();
+	    y.setHP(y.getHP() - dmg);
+	}
+	else {
+	    System.out.println("Unit not in Range");
+	}
     }
 	
 	

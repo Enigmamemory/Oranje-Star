@@ -37,6 +37,12 @@ public class Unit{
     public int getAttack(){
 	return Attack;
     }
+    public int getmaxrange(){
+	return maxrange;
+    }
+    public int getminrange(){
+	return minrange;
+    }
     public int setxcoord(int x){
 	int xcoor = xcoord;
 	xcoord = x;
