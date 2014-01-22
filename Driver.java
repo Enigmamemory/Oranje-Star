@@ -3,7 +3,8 @@ public class Driver{
     Grid Field = new Grid();
     System.out.println(Field);
     Unit Testing = new Unit();
-    Field.Place(Testing, 1, 0);
+    Field.Place(Testing, 0, 1);
+    Field.moveup(Testing);
     System.out.println(Field);
   }
 }  
