@@ -55,10 +55,10 @@ public class Grid {
 	Board[xcoor][ycoor] = null;
     }
     public void attack (Unit x, Unit y){
-	int xdiff = abs((x.getxcoord() - y.getxcoord()));
-	int ydiff = abs((x.getycoord() - y.getycoord()));
+	int xdiff = Math.abs((x.getxcoord() - y.getxcoord()));
+	int ydiff = Math.abs((x.getycoord() - y.getycoord()));
 	int diff = xdiff + ydiff;
-	if (diff <= x.getmaxrange && diff >= minrange){
+	if (diff <= x.getmaxrange && diff >= x.getminrange()){
 	    int dmg = x.getAttack();
 	    y.setHP(y.getHP() - dmg);
 	}
