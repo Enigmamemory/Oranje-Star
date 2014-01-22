@@ -35,7 +35,7 @@ public class Unit{
 	return ycoord;
     }
     public int getAttack(){
-	return Attack;
+	return attack;
     }
     public int getmaxrange(){
 	return maxrange;
@@ -53,7 +53,7 @@ public class Unit{
 	ycoord = y;
 	return ycoor;
     }
-    public void getHP(){
+    public int getHP(){
 	return HP;
     }
     public void setHP(int x){
