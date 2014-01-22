@@ -58,7 +58,7 @@ public class Grid {
 	int xdiff = Math.abs((x.getxcoord() - y.getxcoord()));
 	int ydiff = Math.abs((x.getycoord() - y.getycoord()));
 	int diff = xdiff + ydiff;
-	if (diff <= x.getmaxrange && diff >= x.getminrange()){
+	if (diff <= x.getmaxrange() && diff >= x.getminrange()){
 	    int dmg = x.getAttack();
 	    y.setHP(y.getHP() - dmg);
 	}
