@@ -24,6 +24,12 @@ public class Grid {
     public void Place(Unit a, int x, int y) {
 	Board[x][y].Fodder = a;
     }
+    public string Status(int x, int y){
+    	String all = "";
+    	all += "Terrain: ";
+    	all += Board[x][y].getTerrain();
+    	all += Board[x][y].getUnit();
+    }
     public void moveup (Unit x){
 	int xcoor = x.getxcoord();
 	int ycoor = x.getycoord();
