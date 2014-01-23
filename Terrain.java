@@ -1,5 +1,5 @@
 public class Terrain {
-
+    private int capturerate;	
     private String name;
     
     Terrain(){
@@ -13,5 +13,7 @@ public class Terrain {
     public String toString(){
 	return getTerrain();
     }
-
+    public int getcapturerate(){
+    	return capturerate;
+    }
 }
