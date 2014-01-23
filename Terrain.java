@@ -6,7 +6,7 @@ public class Terrain {
     	name = "Plain ";
     }
 
-    public String getTerrain(){
+    public String getname(){
 	return name;
     }
 
