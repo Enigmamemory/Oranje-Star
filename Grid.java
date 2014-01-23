@@ -28,7 +28,7 @@ public class Grid {
     	String all = "";
     	all += "Terrain: ";
     	all += Board[x][y].getTerrain();
-    	all += Board[x][y].getUnit();
+    	all += Board[x][y].getInfo();
     }
     public void moveup (Unit x){
 	int xcoor = x.getxcoord();
