@@ -16,4 +16,7 @@ public class Terrain {
     public int getcapturerate(){
     	return capturerate;
     }
+    public void setcapturerate(int x){
+    	capturerate = x;
+    }
 }
