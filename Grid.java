@@ -66,7 +66,11 @@ public class Grid {
 	    System.out.println("Unit not in Range");
 	}
     }
-	
+    public void capture (Unit x){
+    	int xcoor = x.getxcoord();
+    	int ycoor = x.getycoord();
+    	Board[xcoor][ycoor].getTerrain().setcapturerate(Board[xcoor][ycoor].getTerrain().getcapturerate() - 1);
+    }	
 	
     public String toString() {
         String all = "";
