@@ -28,6 +28,11 @@ public class Unit{
     public String getUnit(){
 	return name;
     }
+    public String getInfo(){
+    	String all = "" + name;
+    	all += movespace + "\n";all += attack + "\n";all += HP + "\n";all += defense + "\n";
+    	all += minrange + "\n";all += maxrange + "\n";
+    }
     public int getxcoord(){
 	return xcoord; 
     }
