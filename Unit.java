@@ -32,6 +32,7 @@ public class Unit{
     	String all = "" + name;
     	all += movespace + "\n";all += attack + "\n";all += HP + "\n";all += defense + "\n";
     	all += minrange + "\n";all += maxrange + "\n";
+    	return all;
     }
     public int getxcoord(){
 	return xcoord; 
