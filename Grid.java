@@ -24,11 +24,14 @@ public class Grid {
     public void Place(Unit a, int x, int y) {
 	Board[x][y].Fodder = a;
     }
-    public string Status(int x, int y){
+    public String Status(int x, int y){
     	String all = "";
     	all += "Terrain: ";
     	all += Board[x][y].getTerrain();
-    	all += Board[x][y].getInfo();
+	if (Board[x][y].getUnit() != null)
+	    all += Board[x][y].getUnit().getInfo();
+	else
+	    all += "\n";
     	return all;
     }
     public void moveup (Unit x){
