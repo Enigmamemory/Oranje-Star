@@ -27,16 +27,16 @@ public class Grid {
     public void moveup (Unit x){
 	int xcoor = x.getxcoord();
 	int ycoor = x.getycoord();
-	x.setycoord(ycoor + 1);
-	Board[xcoor][ycoor + 1].setUnit(x);
-	Board[xcoor][ycoor] = null;
+	x.setycoord(ycoor - 1);
+	Board[xcoor][ycoor - 1].setUnit(x);
+	Board[xcoor][ycoor].setUnit(null);
     }
     public void moveleft (Unit x){
 	int xcoor = x.getxcoord();
 	int ycoor = x.getycoord();
 	x.setxcoord(xcoor - 1);
 	Board[xcoor - 1][ycoor].setUnit(x);
-	Board[xcoor][ycoor] = null;
+	Board[xcoor][ycoor].setUnit(null);
     }
 
     public void moveright (Unit x){
@@ -44,15 +44,15 @@ public class Grid {
 	int ycoor = x.getycoord();
 	x.setxcoord(xcoor + 1);
 	Board[xcoor + 1][ycoor].setUnit(x);
-	Board[xcoor][ycoor] = null;
+	Board[xcoor][ycoor].setUnit(null);
     }
 
     public void movedown (Unit x){
 	int xcoor = x.getxcoord();
 	int ycoor = x.getycoord();
-	x.setycoord(ycoor - 1);
+	x.setycoord(ycoor + 1);
 	Board[xcoor][ycoor + 1].setUnit(x);
-	Board[xcoor][ycoor] = null;
+	Board[xcoor][ycoor].setUnit(null);
     }
     public void attack (Unit x, Unit y){
 	int xdiff = Math.abs((x.getxcoord() - y.getxcoord()));
@@ -72,13 +72,13 @@ public class Grid {
         String all = "";
         for (int x = 0; x < Board.length ; x++){
 	    for (int y = 0 ; y < Board[x].length ; y++){
-		all += Board[x][y].Floor + " ";
+		all += Board[y][x].Floor + " ";
 	    }
 	    all = all.substring(0,all.length()-1);
 	    all += "\n";
 	    for (int z = 0 ; z < Board[x].length ; z++){
-		if (Board[x][z].Fodder != null)
-		    all += Board[x][z].Fodder + " ";
+		if (Board[z][x].Fodder != null)
+		    all += Board[z][x].Fodder + " ";
 		else
 		    all += "      ";
 	    }
