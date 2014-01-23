@@ -54,6 +54,16 @@ public class Grid {
 	Board[xcoor][ycoor + 1].setUnit(x);
 	Board[xcoor][ycoor].setUnit(null);
     }
+    /*
+    public Unit[] cantarget (Unit x){
+
+	int xdiff = Math.abs((x.getxcoord() - y.getxcoord()));
+	int ydiff = Math.abs((x.getycoord() - y.getycoord()));
+	int diff = xdiff + ydiff;
+	
+
+    }
+    */
     public void attack (Unit x, Unit y){
 	int xdiff = Math.abs((x.getxcoord() - y.getxcoord()));
 	int ydiff = Math.abs((x.getycoord() - y.getycoord()));
