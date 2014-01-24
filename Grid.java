@@ -78,8 +78,6 @@ public class Grid {
     public void attack (Unit x, Unit y){
 	int xdiff = Math.abs((x.getxcoord() - y.getxcoord()));
 	int ydiff = Math.abs((x.getycoord() - y.getycoord()));
-	System.out.println(xdiff);
-	System.out.println(ydiff);
 	int diff = xdiff + ydiff;
 	if (diff <= x.getmaxrange() && diff >= x.getminrange()){
 	    int dmg = x.getAttack();
