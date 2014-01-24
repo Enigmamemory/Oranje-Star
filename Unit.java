@@ -1,19 +1,19 @@
 public class Unit{
-    boolean moved;
-    int movespace;
-    int defaultmove;
-    int attack;
-    int HP;
-    int defense;
-    int minrange;
-    int maxrange;
-    int xcoord;
-    int ycoord;
-    int cost;
-    String goodagainst;
-    String tiretype;
-    String side;
-    String name;
+    protected boolean moved;
+    protected int movespace;
+    protected int defaultmove;
+    protected int attack;
+    protected int HP;
+    protected int defense;
+    protected int minrange;
+    protected int maxrange;
+    protected int xcoord;
+    protected int ycoord;
+    protected int cost;
+    protected String goodagainst;
+    protected String tiretype;
+    protected String side;
+    protected String name;
     
     Unit(){
 	movespace = 1;attack = 1; HP = 10; defense = 1; minrange = 1; maxrange = 1;
