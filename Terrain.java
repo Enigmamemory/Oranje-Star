@@ -92,6 +92,9 @@ public class Terrain {
     public boolean getdeploy(){
 	return candeploy;
     }
+    public int getdefenseinc(){
+    	return defenseinc;
+    }
     public void setdeploy(boolean x){
 	candeploy = x;
     }
