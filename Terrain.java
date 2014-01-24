@@ -1,6 +1,7 @@
 public class Terrain {
     protected boolean candeploy;
     protected int capturerate;	
+    protected int defenseinc;
     protected String name;
     protected String side;
     protected int movetakefoot;
@@ -20,51 +21,51 @@ public class Terrain {
     	side = color;
     }
     public void changePlain(String x){
-    	name = "Plain "; candeploy = false; side = x;
-    	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1;money = 1;
+    	name = "Plain "; candeploy = false; side = x;defenseinc = 1;
+    	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 2;money = 1;
     }
     public void changeAirport(String x){
-    	name = "AirPrt"; candeploy = true; side = x;
+    	name = "AirPrt"; candeploy = true; side = x;defenseinc = 1;
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1;
     }
     public void changeBridge(String x){
-    	name = "Bridge"; candeploy = false; side = x;
+    	name = "Bridge"; candeploy = false; side = x;defenseinc = 1;
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1;
     }
     public void changeCity(String x){
-    	name = "City  "; candeploy = false; side = x;
+    	name = "City  "; candeploy = false; side = x;defenseinc = 1;
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1;
     }
     public void changeCommTower(String x){
-    	name = "ComTwr"; candeploy = false; side = x;
+    	name = "ComTwr"; candeploy = false; side = x;defenseinc = 1;
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1;
     }
     public void changeFactory(String x){
-    	name = "Fctory"; candeploy = true; side = x;
+    	name = "Fctory"; candeploy = true; side = x;defenseinc = 1;
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1;
     }
     public void changeHeadquarter(String x){
-    	name = "HQ    "; candeploy = false; side = x;
+    	name = "HQ    "; candeploy = false; side = x;defenseinc = 1;
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1;
     }    
     public void changeMissileSilo(String x){
-    	name = "MislSl"; candeploy = false; side = x;
+    	name = "MislSl"; candeploy = false; side = x;defenseinc = 1;
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1;
     }
     public void changeMountain(String x){
-    	name = "Mntain"; candeploy = false; side = x;
+    	name = "Mntain"; candeploy = false; side = x;defenseinc = 1;
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1;
     }
     public void changeRoad(String x){
-    	name = "Road  "; candeploy = false; side = x;
+    	name = "Road  "; candeploy = false; side = x;defenseinc = 1;
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1;
     }    
     public void changeWasteland(String x){
-    	name = "WstLnd"; candeploy = false; side = x;
+    	name = "WstLnd"; candeploy = false; side = x;defenseinc = 1;
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1;
     }
     public void changeWood(String x){
-    	name = "Wood  "; candeploy = false; side = x;
+    	name = "Wood  "; candeploy = false; side = x;defenseinc = 1;
     	movetakefoot = 2;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1;
     }    
     public String getname(){
