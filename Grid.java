@@ -141,8 +141,26 @@ public class Grid {
 	int ydiff = Math.abs((x.getycoord() - y.getycoord()));
 	int diff = xdiff + ydiff;
 	if (diff <= x.getmaxrange() && diff >= x.getminrange()){
-	    int dmg = x.getAttack();
-	    y.setHP(y.getHP() - dmg);
+	    String type1 = x.getgoodagainst(); String type2 = y.gettiretype();
+	    int troops = x.getHP();int dmg = x.getAttack();
+	    int block = y.getDefense() + Board[y.getxcoord()][y.getycoord()].getTerrain.getdefenseinc();
+	    if (type1.equals(type2)){
+	    	if (type1.equals("Foot")){
+	    		dmg += 1;
+	    	}
+	    	if (type1.equals("Tank")){
+	    		dmg *= 2;
+	    	}
+	    	if (type1.equals("Air")){
+	    		dmg += 4;
+	    	}
+	    }
+	    dmg -= 10 - troops;
+	    int dmgdealt = dmg - block;
+	    if (dmgdealt > 0){
+	    	y.setHP(y.getHP() - dmg);
+	    }
+	    x.setmoved(true);
 	}
 	else {
 	    System.out.println("Unit not in Range");
