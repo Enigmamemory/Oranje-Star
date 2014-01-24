@@ -38,11 +38,19 @@ public class Grid {
     public void moveup (Unit x){
 	int xcoor = x.getxcoord();
 	int ycoor = x.getycoord();
-	if (Board[xcoor][ycoor - 1].getUnit() == null){
+	int movetake = Board[xcoor][ycoor - 1].getTerrain.getmovetake(x);
+	if (x.getmoved()){
+		System.out.println("This unit has attacked already");
+	}
+	else if (x.getmovespace() - movetake <= 0){
+		System.out.println("This unit does not have enough move");
+	}
+	else if (Board[xcoor][ycoor - 1].getUnit() == null){
 		System.out.println("There is already a unit there");
 	}
 	else{
 		x.setycoord(ycoor - 1);
+		x.setmovespace(x.getmovespace - movetake);
 		Board[xcoor][ycoor - 1].setUnit(x);
 		Board[xcoor][ycoor].setUnit(null); 
 	}
@@ -50,11 +58,19 @@ public class Grid {
     public void moveleft (Unit x){
 	int xcoor = x.getxcoord();
 	int ycoor = x.getycoord();
+	int movetake = Board[xcoor - 1][ycoor.getTerrain.getmovetake(x);
+	if (x.getmoved()){
+		System.out.println("This unit has attacked already");
+	}
+	else if (x.getmovespace() - movetake <= 0){
+		System.out.println("This unit does not have enough move");
+	}
 	if (Board[xcoor - 1][ycoor].getUnit() == null){
 		System.out.println("There is already a unit there");
 	}
 	else{
 		x.setxcoord(xcoor - 1);
+		x.setmovespace(x.getmovespace - movetake);
 		Board[xcoor - 1][ycoor].setUnit(x);
 		Board[xcoor][ycoor].setUnit(null);
 	}
@@ -63,11 +79,19 @@ public class Grid {
     public void moveright (Unit x){
 	int xcoor = x.getxcoord();
 	int ycoor = x.getycoord();
+	int movetake = Board[xcoor + 1][ycoor.getTerrain.getmovetake(x);
+	if (x.getmoved()){
+		System.out.println("This unit has attacked already");
+	}
+	else if (x.getmovespace() - movetake <= 0){
+		System.out.println("This unit does not have enough move");
+	}
 	if (Board[xcoor + 1][ycoor].getUnit() == null){
 		System.out.println("There is already a unit there");
 	}
 	else{
 		x.setxcoord(xcoor + 1);
+		x.setmovespace(x.getmovespace - movetake);
 		Board[xcoor + 1][ycoor].setUnit(x);
 		Board[xcoor][ycoor].setUnit(null);
 	}
@@ -76,11 +100,19 @@ public class Grid {
     public void movedown (Unit x){
 	int xcoor = x.getxcoord();
 	int ycoor = x.getycoord();
+	int movetake = Board[xcoor][ycoor + 1].getTerrain.getmovetake(x);
+	if (x.getmoved()){
+		System.out.println("This unit has attacked already");
+	}
+	else if (x.getmovespace() - movetake <= 0){
+		System.out.println("This unit does not have enough move");
+	}
 	if (Board[xcoor][ycoor + 1].getUnit() == null){
 		System.out.println("There is already a unit there");
 	}
 	else{
 		x.setycoord(ycoor + 1);
+		x.setmovespace(x.getmovespace - movetake);
 		Board[xcoor][ycoor + 1].setUnit(x);
 		Board[xcoor][ycoor].setUnit(null);
 	}
