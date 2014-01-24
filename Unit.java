@@ -1,6 +1,5 @@
 public class Unit{
     protected boolean moved;
-    protected boolean attacked;
     protected int movespace;
     protected int attack;
     protected int HP;
@@ -103,11 +102,11 @@ public class Unit{
     	all += minrange + "\n";all += maxrange + "\n"; all += side;
     	return all;
     }
-    public boolean attacked(){
-    	return attacked;
+    public boolean moved(){
+    	return moved;
     }
-    public void setattacked(boolean x){
-    	attacked = x;
+    public void setmoved(boolean x){
+    	moved = x;
     }
     public int getmovespace(){
     	return movespace;
