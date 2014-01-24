@@ -78,10 +78,6 @@ public class Unit{
     	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
     	name = "ArArML";
     }
-    public void changeRig(){
-    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
-    	name = "Rig   ";
-    }
     public void changeFighter(){
     	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
     	name = "Fighter";
