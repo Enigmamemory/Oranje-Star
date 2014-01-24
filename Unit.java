@@ -67,15 +67,15 @@ public class Unit{
     	name = "Artlry"; protected String goodagainst = "Foot";
     }    
     public void changeAntiTank(){
-    	movespace = 4;attack = 4;HP = 10;defense = 2;minrange = 1;maxrange = 3;cost = 11000;tiretype = "Tank";
+    	movespace = 4;attack = 5;HP = 10;defense = 2;minrange = 1;maxrange = 3;cost = 11000;tiretype = "Tank";
     	name = "AntiTk"; protected String goodagainst = "Tank";
     }
     public void changeRocketLauncher(){
-    	movespace = 5;attack = 1;HP = 10;defense = 1;minrange = 3;maxrange = 5;cost = 15000;tiretype = "Tank";
+    	movespace = 5;attack = 4;HP = 10;defense = 1;minrange = 3;maxrange = 5;cost = 15000;tiretype = "Tank";
     	name = "RktLch"; protected String goodagainst = "Foot";
     }
     public void AntiAirMissileLauncher(){
-    	movespace = 5;attack = 1;HP = 10;defense = 1;minrange = 3;maxrange = 6;cost = 12000;tiretype = "Tank";
+    	movespace = 5;attack = 1;HP = 10;defense = 2;minrange = 3;maxrange = 6;cost = 12000;tiretype = "Tank";
     	name = "ArArML"; protected String goodagainst = "Air";
     }
     public void changeFighter(){
@@ -83,15 +83,15 @@ public class Unit{
     	name = "Fighter"; protected String goodagainst = "Air";
     }
     public void changeBomber(){
-    	movespace = 7;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 20000;tiretype = "Air";
+    	movespace = 7;attack = 4;HP = 10;defense = 3;minrange = 0;maxrange = 1;cost = 20000;tiretype = "Air";
     	name = "Bomber"; protected String goodagainst = "Tank";
     }
     public void changeDuster(){
-    	movespace = 8;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 13000;tiretype = "Air";
+    	movespace = 8;attack = 6;HP = 10;defense = 2;minrange = 0;maxrange = 1;cost = 13000;tiretype = "Air";
     	name = "Duster"; protected String goodagainst = "Foot";
     }
     public void changeBattleHelicopter(){
-    	movespace = 6;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 9000;tiretype = "Air";
+    	movespace = 6;attack = 2;HP = 10;defense = 2;minrange = 0;maxrange = 1;cost = 9000;tiretype = "Air";
     	name = "BtlHcp"; protected String goodagainst = "Air";
     }
     public String getUnit(){
