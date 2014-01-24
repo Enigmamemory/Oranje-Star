@@ -71,6 +71,21 @@ public class Terrain {
     public String getname(){
 	return name;
     }
+    public int getmovetake(Unit x){
+    	String type = x.gettiretype();
+    	if (type.equals("Foot")){
+    		return movetakefoot;
+    	}
+    	else if (type.equals("Tire")){
+    		return movetaketire;
+    	}
+    	else if (type.equals("Tank")){
+    		return movetaketank;
+    	}
+    	else {
+    		return movetakeair;
+    	}
+    }
     public void setname(String x){
 	name = x;
     }
