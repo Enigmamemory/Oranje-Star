@@ -6,7 +6,7 @@ public class Terrain {
     Terrain(){
     	name = "Plain ";
 	capturerate = 20;
-	candeploy = false;
+	candeploy = true;
     }
 
     public String getname(){
