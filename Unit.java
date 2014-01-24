@@ -129,6 +129,12 @@ public class Unit{
     public int getminrange(){
 	return minrange;
     }
+    public String gettiretype(){
+    	return tiretype;
+    }
+    public String getgoodagainst(){
+    	return goodagainst();
+    }
     public int setxcoord(int x){
 	int xcoor = xcoord;
 	xcoord = x;
