@@ -34,12 +34,12 @@ public class Grid {
 	Board[x][y].Fodder = a;
 	a.setxcoord(x);a.setycoord(y);
     }
-    public int turngain(String x){
+    public int turngain(String side){
     	int total = 0;
 	for (int x = 0; x < Board.length ; x++){
 	    for (int y = 0 ; y < Board[x].length ; y++){
-		if (Boxes[x][y].getTerrain.getside().equals(x)){
-			total += Boxes[x][y].getTerrain.getmoney();
+		if (Board[x][y].getTerrain().getside().equals(side)){
+		    total += Board[x][y].getTerrain().getmoney();
 		}
 	    }    
 	}
@@ -197,10 +197,13 @@ public class Grid {
     	}
     }	
 
-    public void deploy (Unit guy, int x, int y){
+    public void deploy (int money, Unit guy, int x, int y){
 	if (Board[x][y].Floor.candeploy == true){
 	    if (Board[x][y].Fodder == null){
-		Place(guy,x,y);
+		if (guy.cost < money)
+		    Place(guy,x,y);
+		else
+		    System.out.println("Don't have enough money to deploy this unit");
 	    }
 	    else
 		System.out.println("Unit occupying terrain, cannot deploy");
