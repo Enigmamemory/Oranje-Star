@@ -31,80 +31,68 @@ public class Unit{
     }
     public void changeInfantry(){
     	movespace = 3;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 1500;tiretype = "Foot";
-    	name = "Inftry"; protected String goodagainst;
+    	name = "Inftry"; protected String goodagainst = "Foot";
     }
     public void changeMech(){
     	movespace = 2;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 2500;tiretype = "Foot";
-    	name = "Mech  "; protected String goodagainst;
+    	name = "Mech  "; protected String goodagainst = "Foot";
     }
     public void changeBike(){
-    	movespace = 5;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 2500;tiretype = "Foot";
-    	name = "Bike  "; protected String goodagainst;
+    	movespace = 5;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 2500;tiretype = "Tire";
+    	name = "Bike  "; protected String goodagainst = "Foot";
     }
     public void changeRecon(){
-    	movespace = 8;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 4000;tiretype = "Foot";
-    	name = "Recon "; protected String goodagainst;
-    }
-    public void changeFlare(){
-    	movespace = 5;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 5000;tiretype = "Foot";
-    	name = "Flare "; protected String goodagainst;
+    	movespace = 8;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 4000;tiretype = "Tire";
+    	name = "Recon "; protected String goodagainst = "None";
     }
     public void changeAntiAirTank(){
-    	movespace = 6;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 7000;tiretype = "Foot";
-    	name = "AtArTk"; protected String goodagainst;
+    	movespace = 6;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 7000;tiretype = "Tank";
+    	name = "AtArTk"; protected String goodagainst = "Air";
     }
     public void changeLightTank(){
-    	movespace = 6;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 7000;tiretype = "Foot";
-    	name = "LghtTk"; protected String goodagainst;
+    	movespace = 6;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 7000;tiretype = "Tank";
+    	name = "LghtTk"; protected String goodagainst = "Foot";
     }
     public void changeMediumTank(){
-    	movespace = 5;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 12000;tiretype = "Foot";
-    	name = "MedTnk"; protected String goodagainst;
+    	movespace = 5;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 12000;tiretype = "Tank";
+    	name = "MedTnk"; protected String goodagainst = "Foot";
     } 
     public void changeWarTank(){
-    	movespace = 4;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 16000;tiretype = "Foot";
-    	name = "WarTnk"; protected String goodagainst;
+    	movespace = 4;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 16000;tiretype = "Tank";
+    	name = "WarTnk"; protected String goodagainst = "Foot";
     }
     public void changeArtillery(){
-    	movespace = 5;attack = 1;HP = 10;defense = 1;minrange = 2;maxrange = 3;cost = 6000;tiretype = "Foot";
-    	name = "Artlry"; protected String goodagainst;
+    	movespace = 5;attack = 1;HP = 10;defense = 1;minrange = 2;maxrange = 3;cost = 6000;tiretype = "Tank";
+    	name = "Artlry"; protected String goodagainst = "Foot";
     }    
     public void changeAntiTank(){
-    	movespace = 4;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 3;cost = 11000;tiretype = "Foot";
-    	name = "AntiTk"; protected String goodagainst;
+    	movespace = 4;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 3;cost = 11000;tiretype = "Tank";
+    	name = "AntiTk"; protected String goodagainst = "Tank";
     }
     public void changeRocketLauncher(){
-    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 3;maxrange = 5;cost = 15000;tiretype = "Foot";
-    	name = "RktLch"; protected String goodagainst;
+    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 3;maxrange = 5;cost = 15000;tiretype = "Tank";
+    	name = "RktLch"; protected String goodagainst = "Foot";
     }
     public void AntiAirMissileLauncher(){
-    	movespace = 5;attack = 1;HP = 10;defense = 1;minrange = 3;maxrange = 6;cost = 12000;tiretype = "Foot";
-    	name = "ArArML"; protected String goodagainst;
+    	movespace = 5;attack = 1;HP = 10;defense = 1;minrange = 3;maxrange = 6;cost = 12000;tiretype = "Tank";
+    	name = "ArArML"; protected String goodagainst = "Air";
     }
     public void changeFighter(){
-    	movespace = 9;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 20000;tiretype = "Foot";
-    	name = "Fighter"; protected String goodagainst;
+    	movespace = 9;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 20000;tiretype = "Air";
+    	name = "Fighter"; protected String goodagainst = "Air";
     }
     public void changeBomber(){
-    	movespace = 7;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 20000;tiretype = "Foot";
-    	name = "Bomber"; protected String goodagainst;
+    	movespace = 7;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 20000;tiretype = "Air";
+    	name = "Bomber"; protected String goodagainst = "Tank";
     }
     public void changeDuster(){
-    	movespace = 8;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;cost = 1;tiretype = "Foot";
-    	name = "Duster"; protected String goodagainst;
+    	movespace = 8;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 13000;tiretype = "Air";
+    	name = "Duster"; protected String goodagainst = "Foot";
     }
     public void changeBattleHelicopter(){
-    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;cost = 1;tiretype = "Foot";
-    	name = "BtlHcp"; protected String goodagainst;
+    	movespace = 6;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 9000;tiretype = "Air";
+    	name = "BtlHcp"; protected String goodagainst = "Air";
     }
-    public void changeSeaplane(){
-    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;cost = 1;tiretype = "Foot";
-    	name = "Seapln"; protected String goodagainst;
-    }
-    public void changeTransportHelicopter(){
-    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;cost = 1;tiretype = "Foot";
-    	name = "TrnHcp"; protected String goodagainst;
-    }    
     public String getUnit(){
 	return name;
     }
