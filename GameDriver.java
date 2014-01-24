@@ -85,7 +85,7 @@ public class GameDriver{
 			    if (Field.Board[xgiven][ygiven].Fodder != null) {
 				Unit selected = Field.Board[xgiven][ygiven].Fodder;
 				int choice = 0;
-				System.out.println("Move unit or attack with unit? Type 1 to move, 2 to attack.");
+				System.out.println("Move unit, attack with unit, or capture with unit? Type 1 to move, 2 to attack, 3 to capture.");
 				try {
 				    choice = Integer.parseInt(in.readLine());
 				}
@@ -161,21 +161,64 @@ public class GameDriver{
 					}
 				    }
 				    else {
-					System.out.println("Cannot register command. Returning to beginning.");
+					if (choice == 3){
+					    if (Field.Board[xgiven][ygiven].Floor.candeploy == true){
+						if (!Field.Board[xgiven][ygiven].Floor.side.equals(current)){
+						    Field.capture(Field.Board[xgiven][ygiven].Fodder);
+						}
+						else
+						    System.out.println("You already control this building.");
+					    }
+					    else {
+						System.out.println("There is no building to capture here.");
+					    }
+					}
+					else{
+					    System.out.println("Cannot register command. Returning to beginning.");
+					}
 				    }
 				}
 			    }
 			    else {
 				if (Field.Board[xgiven][ygiven].Floor.candeploy == true && Field.Board[xgiven][ygiven].Floor.side.equals(current)){
-				    String deployment = ""
+				    String deployment = "";
 				    System.out.println("Deploy unit? Type yes to deploy");
 				    try {
 					deployment = in.readLine();
 				    }
 				    catch( IOException e) {}
-				    if (deployment = "yes"){
-					String buy = "Type the number corresponding to the unit to deploy it.";
-					if (Field.Board[xgiven][ygiven].Floor.getTerrain().equals("Fctory")){
+				    if (deployment.equals("yes")){
+					int choose = 0;
+					String buy = "Type the number corresponding to the unit to deploy it.\n";
+					if (Field.Board[xgiven][ygiven].Floor.getname().equals("Fctory")){
+					    buy += "1. Infantry - 1500\n";
+					    buy += "2. Mech - 2500\n";
+					    buy += "3. Bike - 2500\n";
+					    buy += "4. Recon - 4000\n";
+					    buy += "5. Anti-Air - 7000\n";
+					    buy += "6. Light Tank - 7000\n";
+					    buy += "7. Medium Tank - 12000\n";
+					    buy += "8. War Tank - 16000\n";
+					    buy += "9. Artillery - 6000\n";
+					    buy += "10. Anti-Tank - 11000\n";
+					    buy += "11. Rockets - 15000\n";
+					    buy += "12. Missile - 12000";
+					    System.out.println(buy);
+					    try {
+						choose = Integer.parseInt(in.readLine());
+					    }
+					    catch(IOException e){}
+					}
+					if (Field.Board[xgiven][ygiven].Floor.getname().equals("AirPrt")){
+					    buy += "1. Fighter - 20000\n";
+					    buy += "2. Bomber - 20000\n";
+					    buy += "3. Duster - 13000\n";
+					    buy += "4. Battlecopter - 9000\n";
+					    System.out.println(buy);
+					    try {
+						choose = Integer.parseInt(in.readLine());
+					    }
+					    catch(IOException e){}
 					}
 				    }   
 				}
