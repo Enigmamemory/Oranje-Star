@@ -104,6 +104,9 @@ public class Terrain {
     public int getcapturerate(){
     	return capturerate;
     }
+    public int getmoney(){
+    	return money;
+    }
     public void setcapturerate(int x){
     	capturerate = x;
     }
