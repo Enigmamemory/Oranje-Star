@@ -1,6 +1,6 @@
 public class Boxes {
-    Terrain Floor;
-    Unit Fodder;
+    protected Terrain Floor;
+    protected Unit Fodder;
 
     public Boxes(){
 	Floor = new Terrain();
