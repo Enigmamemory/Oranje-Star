@@ -1,14 +1,14 @@
 public class Terrain {
-    private boolean candeploy;
-    private int capturerate;	
-    private int defenseinc;
-    private String name;
-    private String side;
-    private int movetakefoot;
-    private int movetaketank;
-    private int movetakeair;
-    private int movetaketire;
-    private int money;
+    boolean candeploy;
+    int capturerate;	
+    int defenseinc;
+    String name;
+    String side;
+    int movetakefoot;
+    int movetaketank;
+    int movetakeair;
+    int movetaketire;
+    int money;
     
     Terrain(){
     	name = "Plain ";
