@@ -138,7 +138,7 @@ public class Unit{
     	return tiretype;
     }
     public String getgoodagainst(){
-    	return goodagainst();
+    	return goodagainst;
     }
     public int setxcoord(int x){
 	int xcoor = xcoord;
