@@ -28,9 +28,9 @@ public class Grid {
     public String Status(int x, int y){
     	String all = "";
     	all += "Terrain: ";
-    	all += Board[x][y].getTerrain();
-	if (Board[x][y].getUnit() != null)
-	    all += Board[x][y].getUnit().getInfo();
+    	all += Board[x][y].Floor.getname();
+	if (Board[x][y].Fodder != null)
+	    all += Board[x][y].Fodder.getInfo();
 	else
 	    all += "\n";
     	return all;
@@ -92,7 +92,19 @@ public class Grid {
     	int ycoor = x.getycoord();
     	Board[xcoor][ycoor].getTerrain().setcapturerate(Board[xcoor][ycoor].getTerrain().getcapturerate() - 1);
     }	
-	
+
+    public void deploy (Unit guy, int x, int y){
+	if (Board[x][y].Floor.candeploy == true){
+	    if (Board[x][y].Fodder == null){
+		Place(guy,x,y);
+	    }
+	    else
+		System.out.println("Unit occupying terrain, cannot deploy");
+	}
+	else
+	    System.out.println("Terrain cannot deploy units");
+    }
+
     public String toString() {
         String all = "";
         for (int x = 0; x < Board.length ; x++){
