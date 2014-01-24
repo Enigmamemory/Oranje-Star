@@ -51,15 +51,15 @@ public class Unit{
     	name = "AtArTk"; protected String goodagainst = "Air";
     }
     public void changeLightTank(){
-    	defaultmove = 6;attack = 4;HP = 10;defense = 3;minrange = 0;maxrange = 1;cost = 7000;tiretype = "Tank";
+    	defaultmove = 6;attack = 4;HP = 10;defense = 2;minrange = 0;maxrange = 1;cost = 7000;tiretype = "Tank";
     	name = "LghtTk"; protected String goodagainst = "Foot";
     }
     public void changeMediumTank(){
-    	defaultmove = 5;attack = 5;HP = 10;defense = 4;minrange = 0;maxrange = 1;cost = 12000;tiretype = "Tank";
+    	defaultmove = 5;attack = 5;HP = 10;defense = 3;minrange = 0;maxrange = 1;cost = 12000;tiretype = "Tank";
     	name = "MedTnk"; protected String goodagainst = "Foot";
     } 
     public void changeWarTank(){
-    	defaultmove = 4;attack = 6;HP = 10;defense = 5;minrange = 0;maxrange = 1;cost = 16000;tiretype = "Tank";
+    	defaultmove = 4;attack = 6;HP = 10;defense = 4;minrange = 0;maxrange = 1;cost = 16000;tiretype = "Tank";
     	name = "WarTnk"; protected String goodagainst = "Foot";
     }
     public void changeArtillery(){
@@ -83,7 +83,7 @@ public class Unit{
     	name = "Fighter"; protected String goodagainst = "Air";
     }
     public void changeBomber(){
-    	defaultmove = 7;attack = 4;HP = 10;defense = 3;minrange = 0;maxrange = 1;cost = 20000;tiretype = "Air";
+    	defaultmove = 7;attack = 5;HP = 10;defense = 3;minrange = 0;maxrange = 1;cost = 20000;tiretype = "Air";
     	name = "Bomber"; protected String goodagainst = "Tank";
     }
     public void changeDuster(){
