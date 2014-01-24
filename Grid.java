@@ -34,6 +34,17 @@ public class Grid {
 	Board[x][y].Fodder = a;
 	a.setxcoord(x);a.setycoord(y);
     }
+    public int turngain(String x){
+    	int total = 0;
+	for (int x = 0; x < Board.length ; x++){
+	    for (int y = 0 ; y < Board[x].length ; y++){
+		if (Boxes[x][y].getTerrain.getside().equals(x)){
+			total += Boxes[x][y].getTerrain.getmoney();
+		}
+	    }    
+	}
+	return total;
+    }
     public String Status(int x, int y){
     	String all = "";
     	all += "Terrain: ";
