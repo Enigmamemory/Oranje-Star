@@ -26,6 +26,82 @@ public class Unit{
 	coordinate[0] = xcoord; coordinate[1] = ycoord;
 	return coordinate; 
     }
+    public void changeInfantry(){
+    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
+    	name = "Inftry";
+    }
+    public void changeMech(){
+    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
+    	name = "Mech  ";
+    }
+    public void changeBike(){
+    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
+    	name = "Bike  ";
+    }
+    public void changeRecon(){
+    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
+    	name = "Recon ";
+    }
+    public void changeFlare(){
+    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
+    	name = "Flare ";
+    }
+    public void changeAntiAirTank(){
+    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
+    	name = "AtArTk";
+    }
+    public void changeLightTank(){
+    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
+    	name = "LghtTk";
+    }
+    public void changeMediumTank(){
+    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
+    	name = "MedTnk";
+    }
+    public void changeWarTank(){
+    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
+    	name = "WarTnk";
+    }
+    public void changeArtillery(){
+    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
+    	name = "Artlry";
+    }    
+    public void changeAntiTank(){
+    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
+    	name = "AntiTk";
+    }
+    public void changeRocketLauncher(){
+    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
+    	name = "RktLch";
+    }
+    public void AntiAirMissileLauncher(){
+    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
+    	name = "ArArML";
+    }
+    public void changeFighter(){
+    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
+    	name = "Fighter";
+    }
+    public void changeBomber(){
+    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
+    	name = "Bomber";
+    }
+    public void changeDuster(){
+    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
+    	name = "Duster";
+    }
+    public void changeBattleHelicopter(){
+    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
+    	name = "BtlHcp";
+    }
+    public void changeSeaplane(){
+    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
+    	name = "Seapln";
+    }
+    public void changeTransportHelicopter(){
+    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 1;
+    	name = "TrnHcp";
+    }    
     public String getUnit(){
 	return name;
     }
