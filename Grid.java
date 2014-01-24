@@ -38,32 +38,52 @@ public class Grid {
     public void moveup (Unit x){
 	int xcoor = x.getxcoord();
 	int ycoor = x.getycoord();
-	x.setycoord(ycoor - 1);
-	Board[xcoor][ycoor - 1].setUnit(x);
-	Board[xcoor][ycoor].setUnit(null);
+	if (Board[xcoor][ycoor - 1].getUnit() == null){
+		System.out.println("There is already a unit there");
+	}
+	else{
+		x.setycoord(ycoor - 1);
+		Board[xcoor][ycoor - 1].setUnit(x);
+		Board[xcoor][ycoor].setUnit(null); 
+	}
     }
     public void moveleft (Unit x){
 	int xcoor = x.getxcoord();
 	int ycoor = x.getycoord();
-	x.setxcoord(xcoor - 1);
-	Board[xcoor - 1][ycoor].setUnit(x);
-	Board[xcoor][ycoor].setUnit(null);
+	if (Board[xcoor - 1][ycoor].getUnit() == null){
+		System.out.println("There is already a unit there");
+	}
+	else{
+		x.setxcoord(xcoor - 1);
+		Board[xcoor - 1][ycoor].setUnit(x);
+		Board[xcoor][ycoor].setUnit(null);
+	}
     }
 
     public void moveright (Unit x){
 	int xcoor = x.getxcoord();
 	int ycoor = x.getycoord();
-	x.setxcoord(xcoor + 1);
-	Board[xcoor + 1][ycoor].setUnit(x);
-	Board[xcoor][ycoor].setUnit(null);
+	if (Board[xcoor + 1][ycoor].getUnit() == null){
+		System.out.println("There is already a unit there");
+	}
+	else{
+		x.setxcoord(xcoor + 1);
+		Board[xcoor + 1][ycoor].setUnit(x);
+		Board[xcoor][ycoor].setUnit(null);
+	}
     }
 
     public void movedown (Unit x){
 	int xcoor = x.getxcoord();
 	int ycoor = x.getycoord();
-	x.setycoord(ycoor + 1);
-	Board[xcoor][ycoor + 1].setUnit(x);
-	Board[xcoor][ycoor].setUnit(null);
+	if (Board[xcoor][ycoor + 1].getUnit() == null){
+		System.out.println("There is already a unit there");
+	}
+	else{
+		x.setycoord(ycoor + 1);
+		Board[xcoor][ycoor + 1].setUnit(x);
+		Board[xcoor][ycoor].setUnit(null);
+	}
     }
     /*
     public Unit[] cantarget (Unit x){
