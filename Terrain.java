@@ -26,31 +26,31 @@ public class Terrain {
     }
     public void changeAirport(String x){
     	name = "AirPrt"; candeploy = true; side = x;defenseinc = 3;
-    	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1;
+    	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1000;
     }
     public void changeBridge(String x){
     	name = "Bridge"; candeploy = false; side = x;defenseinc = 0;
-    	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1;
+    	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 0;
     }
     public void changeCity(String x){
     	name = "City  "; candeploy = false; side = x;defenseinc = 2;
-    	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1;
+    	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1000;
     }
     public void changeCommTower(String x){
     	name = "ComTwr"; candeploy = false; side = x;defenseinc = 3;
-    	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1;
+    	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1000;
     }
     public void changeFactory(String x){
     	name = "Fctory"; candeploy = true; side = x;defenseinc = 3;
-    	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1;
+    	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1000;
     }
     public void changeHeadquarter(String x){
     	name = "HQ    "; candeploy = false; side = x;defenseinc = 4;
-    	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1;
+    	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1000;
     }    
     public void changeMissileSilo(String x){
     	name = "MislSl"; candeploy = false; side = x;defenseinc = 2;
-    	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1;
+    	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1000;
     }
     public void changeMountain(String x){
     	name = "Mntain"; candeploy = false; side = x;defenseinc = 4;
