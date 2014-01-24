@@ -23,6 +23,7 @@ public class Grid {
     }
     public void Place(Unit a, int x, int y) {
 	Board[x][y].Fodder = a;
+	a.setxcoord(x);a.setycoord(y);
     }
     public String Status(int x, int y){
     	String all = "";
@@ -77,6 +78,8 @@ public class Grid {
     public void attack (Unit x, Unit y){
 	int xdiff = Math.abs((x.getxcoord() - y.getxcoord()));
 	int ydiff = Math.abs((x.getycoord() - y.getycoord()));
+	System.out.println(xdiff);
+	System.out.println(ydiff);
 	int diff = xdiff + ydiff;
 	if (diff <= x.getmaxrange() && diff >= x.getminrange()){
 	    int dmg = x.getAttack();

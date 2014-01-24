@@ -11,7 +11,7 @@ public class Terrain {
     }
 
     public String toString(){
-	return getTerrain();
+	return getname();
     }
     public int getcapturerate(){
     	return capturerate;
