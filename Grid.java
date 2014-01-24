@@ -35,6 +35,15 @@ public class Grid {
 	    all += "\n";
     	return all;
     }
+    public void setDefaultMove(){
+	for (int x = 0; x < Board.length ; x++){
+	    for (int y = 0 ; y < Board[x].length ; y++){
+	    	if (Board[x][y].Fodder != null){
+	    		Board[x][y].Fodder.setmovespace(Fodder.defaultmove());
+	    	}
+	    }
+	}
+    }
     public void moveup (Unit x){
 	int xcoor = x.getxcoord();
 	int ycoor = x.getycoord();
