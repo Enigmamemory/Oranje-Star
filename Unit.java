@@ -103,6 +103,12 @@ public class Unit{
     	all += minrange + "\n";all += maxrange + "\n"; all += side;
     	return all;
     }
+    public boolean attacked(){
+    	return attacked;
+    }
+    public void setattacked(boolean x){
+    	attacked = x;
+    }
     public int getmovespace(){
     	return movespace;
     }
