@@ -21,6 +21,15 @@ public class Grid {
 	    }
 	}
     }
+    Grid(int c){
+    	Length = 20; Width = 20;
+        Board = new Boxes [Length][Width];
+	for (int x = 0; x < Board.length ; x++){
+	    for (int y = 0 ; y < Board[x].length ; y++){
+		Board[x][y] = new Boxes();
+	    }
+	}
+    }
     public void Place(Unit a, int x, int y) {
 	Board[x][y].Fodder = a;
 	a.setxcoord(x);a.setycoord(y);
@@ -167,9 +176,14 @@ public class Grid {
 	}
     }
     public void capture (Unit x){
-    	int xcoor = x.getxcoord();
-    	int ycoor = x.getycoord();
-    	Board[xcoor][ycoor].getTerrain().setcapturerate(Board[xcoor][ycoor].getTerrain().getcapturerate() - 1);
+    	if (x.gettiretype() == "Foot"){
+    		int xcoor = x.getxcoord();
+    		int ycoor = x.getycoord();
+    		Board[xcoor][ycoor].getTerrain().setcapturerate(Board[xcoor][ycoor].getTerrain().getcapturerate() - 1);
+    	}
+    	else {
+    		System.out.println("Only Footmen can capture stuff");
+    	}
     }	
 
     public void deploy (Unit guy, int x, int y){
