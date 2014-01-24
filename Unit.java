@@ -1,5 +1,6 @@
 public class Unit{
     protected boolean moved;
+    protected boolean attacked;
     protected int movespace;
     protected int attack;
     protected int HP;
@@ -30,19 +31,19 @@ public class Unit{
 	return coordinate; 
     }
     public void changeInfantry(){
-    	movespace = 3;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 1500;tiretype = "Foot";
+    	movespace = 3;attack = 2;HP = 10;defense = 0;minrange = 0;maxrange = 1;cost = 1500;tiretype = "Foot";
     	name = "Inftry"; protected String goodagainst = "Foot";
     }
     public void changeMech(){
-    	movespace = 2;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 2500;tiretype = "Foot";
+    	movespace = 2;attack = 3;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 2500;tiretype = "Foot";
     	name = "Mech  "; protected String goodagainst = "Foot";
     }
     public void changeBike(){
-    	movespace = 5;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 2500;tiretype = "Tire";
+    	movespace = 5;attack = 2;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 2500;tiretype = "Tire";
     	name = "Bike  "; protected String goodagainst = "Foot";
     }
     public void changeRecon(){
-    	movespace = 8;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 4000;tiretype = "Tire";
+    	movespace = 8;attack = 2;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 4000;tiretype = "Tire";
     	name = "Recon "; protected String goodagainst = "None";
     }
     public void changeAntiAirTank(){
@@ -50,27 +51,27 @@ public class Unit{
     	name = "AtArTk"; protected String goodagainst = "Air";
     }
     public void changeLightTank(){
-    	movespace = 6;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 7000;tiretype = "Tank";
+    	movespace = 6;attack = 4;HP = 10;defense = 3;minrange = 0;maxrange = 1;cost = 7000;tiretype = "Tank";
     	name = "LghtTk"; protected String goodagainst = "Foot";
     }
     public void changeMediumTank(){
-    	movespace = 5;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 12000;tiretype = "Tank";
+    	movespace = 5;attack = 5;HP = 10;defense = 4;minrange = 0;maxrange = 1;cost = 12000;tiretype = "Tank";
     	name = "MedTnk"; protected String goodagainst = "Foot";
     } 
     public void changeWarTank(){
-    	movespace = 4;attack = 1;HP = 10;defense = 1;minrange = 0;maxrange = 1;cost = 16000;tiretype = "Tank";
+    	movespace = 4;attack = 6;HP = 10;defense = 5;minrange = 0;maxrange = 1;cost = 16000;tiretype = "Tank";
     	name = "WarTnk"; protected String goodagainst = "Foot";
     }
     public void changeArtillery(){
-    	movespace = 5;attack = 1;HP = 10;defense = 1;minrange = 2;maxrange = 3;cost = 6000;tiretype = "Tank";
+    	movespace = 5;attack = 5;HP = 10;defense = 2;minrange = 2;maxrange = 3;cost = 6000;tiretype = "Tank";
     	name = "Artlry"; protected String goodagainst = "Foot";
     }    
     public void changeAntiTank(){
-    	movespace = 4;attack = 1;HP = 10;defense = 1;minrange = 1;maxrange = 3;cost = 11000;tiretype = "Tank";
+    	movespace = 4;attack = 4;HP = 10;defense = 2;minrange = 1;maxrange = 3;cost = 11000;tiretype = "Tank";
     	name = "AntiTk"; protected String goodagainst = "Tank";
     }
     public void changeRocketLauncher(){
-    	movespace = 1;attack = 1;HP = 10;defense = 1;minrange = 3;maxrange = 5;cost = 15000;tiretype = "Tank";
+    	movespace = 5;attack = 1;HP = 10;defense = 1;minrange = 3;maxrange = 5;cost = 15000;tiretype = "Tank";
     	name = "RktLch"; protected String goodagainst = "Foot";
     }
     public void AntiAirMissileLauncher(){
