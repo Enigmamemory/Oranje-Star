@@ -125,6 +125,9 @@ public class Unit{
     public int getAttack(){
 	return attack;
     }
+    public int getDefense(){
+    	return defense;
+    }
     public int getmaxrange(){
 	return maxrange;
     }
