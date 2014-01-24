@@ -97,9 +97,10 @@ public class Unit{
 	return name;
     }
     public String getInfo(){
-    	String all = "" + name;
-    	all += movespace + "\n";all += attack + "\n";all += HP + "\n";all += defense + "\n";
-    	all += minrange + "\n";all += maxrange + "\n"; all += side;
+    	String all = "Name: " + name + "\n";
+    	all += "Movespace: " + movespace + "\n";all += "Attack: " + attack + "\n";all += "HP: " + HP + "\n";
+    	all += "Defense: " + defense + "\n";all += "Range: " + minrange + " - " + maxrange + "\n";
+    	all += "Team: " + side + "\n";all += "MoveType: " + tiretype + "\n";all += "Strength: " + goodagainst + "\n";
     	return all;
     }
     public boolean moved(){
