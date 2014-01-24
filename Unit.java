@@ -8,17 +8,18 @@ public class Unit{
     protected int maxrange;
     protected int xcoord;
     protected int ycoord;
+    protected String side;
     protected String name;
     
     Unit(){
 	movespace = 1;attack = 1; HP = 10; defense = 1; minrange = 1; maxrange = 1;
-	name = "Rookie";
+	name = "Rookie"; side = "neutral";
     }
-    Unit(int ms,int att, int H, int def,int min,int max,int x, int y, String N){
+    Unit(int ms,int att, int H, int def,int min,int max,int x, int y, String N, String color){
 	movespace = ms; attack = att; HP = H;
 	defense = def; minrange = min; maxrange = max;
 	xcoord = x; ycoord = y;
-	name = N;
+	name = N; side = color;
     }
     public int [] move(){
 	int [] coordinate = new int [2];
@@ -31,7 +32,7 @@ public class Unit{
     public String getInfo(){
     	String all = "" + name;
     	all += movespace + "\n";all += attack + "\n";all += HP + "\n";all += defense + "\n";
-    	all += minrange + "\n";all += maxrange + "\n";
+    	all += minrange + "\n";all += maxrange + "\n"; all += side;
     	return all;
     }
     public int getxcoord(){
