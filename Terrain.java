@@ -2,13 +2,18 @@ public class Terrain {
     protected boolean candeploy;
     protected int capturerate;	
     protected String name;
+    protected String side;
     
     Terrain(){
     	name = "Plain ";
 	capturerate = 20;
 	candeploy = true;
+	side = "Neutral";
     }
-
+    Terrain(String color){
+    	this();
+    	side = color;
+    }
     public String getname(){
 	return name;
     }
