@@ -103,6 +103,12 @@ public class Unit{
     	all += minrange + "\n";all += maxrange + "\n"; all += side;
     	return all;
     }
+    public int getmovespace(){
+    	return movespace;
+    }
+    public void setmovespace(int x){
+    	movespace = x;
+    }
     public int getxcoord(){
 	return xcoord; 
     }
