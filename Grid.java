@@ -122,7 +122,9 @@ public class Grid {
     public void setMovedFalse(){
 	for (int x = 0; x< Board.length ; x++){
 	    for (int y = 0 ; y < Board[x].length ; y++){
-		Board[x][y].Fodder.setmoved(false);
+		if (Board[x][y].Fodder != null){
+		    Board[x][y].Fodder.setmoved(false);
+		}
 	    }
 	}
     }
