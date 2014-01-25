@@ -21,8 +21,8 @@ public class Terrain {
     	this();
     	side = color;
     }
-    public void changePlain(String x){
-    	name = "Plain "; candeploy = false; side = x;defenseinc = 1;
+    public void changePlain(){
+    	name = "Plain "; candeploy = false;defenseinc = 1;
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 2;money = 0;
     }
     public void changeAirport(String x){
@@ -30,8 +30,8 @@ public class Terrain {
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1000;
     	cancapture = true;
     }
-    public void changeBridge(String x){
-    	name = "Bridge"; candeploy = false; side = x;defenseinc = 0;
+    public void changeBridge(){
+    	name = "Bridge"; candeploy = false;defenseinc = 0;
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 0;
     }
     public void changeCity(String x){
@@ -59,20 +59,20 @@ public class Terrain {
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1000;
     	cancapture = true;
     }
-    public void changeMountain(String x){
-    	name = "Mntain"; candeploy = false; side = x;defenseinc = 4;
+    public void changeMountain(){
+    	name = "Mntain"; candeploy = false; defenseinc = 4;
     	movetakefoot = 2;movetaketank = 99;movetakeair = 1;movetaketire = 99; money = 0;
     }
-    public void changeRoad(String x){
-    	name = "Road  "; candeploy = false; side = x;defenseinc = 0;
+    public void changeRoad(){
+    	name = "Road  "; candeploy = false; defenseinc = 0;
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 0;
     }    
-    public void changeWasteland(String x){
-    	name = "WstLnd"; candeploy = false; side = x;defenseinc = 2;
+    public void changeWasteland(){
+    	name = "WstLnd"; candeploy = false; defenseinc = 2;
     	movetakefoot = 1;movetaketank = 2;movetakeair = 1;movetaketire = 3; money = 0;
     }
-    public void changeWood(String x){
-    	name = "Wood  "; candeploy = false; side = x;defenseinc = 3;
+    public void changeWood(){
+    	name = "Wood  "; candeploy = false; defenseinc = 3;
     	movetakefoot = 1;movetaketank = 2;movetakeair = 1;movetaketire = 3; money = 0;
     }    
     public String getname(){
