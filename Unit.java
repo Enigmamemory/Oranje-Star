@@ -17,7 +17,7 @@ public class Unit{
     
     Unit(){
 	movespace = 1;attack = 1; HP = 10; defense = 1; minrange = 1; maxrange = 1;
-	name = "Rookie"; side = "neutral";
+	name = "Rookie"; side = "Neutral";
     }
     Unit(int ms,int att, int H, int def,int min,int max,int x, int y, String N, String color){
 	movespace = ms; attack = att; HP = H;
