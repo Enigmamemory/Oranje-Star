@@ -14,7 +14,7 @@ public class Grid {
     }
     Grid(int a, int b){
         Length = a; Width = b;
-        Board = new Boxes [Length][Width];
+        Board = new Boxes [Width][Length];
 	for (int x = 0; x < Board.length ; x++){
 	    for (int y = 0 ; y < Board[x].length ; y++){
 		Board[x][y] = new Boxes();
@@ -22,43 +22,39 @@ public class Grid {
 	}
     }
     Grid(int c){
-    	if (c == 1){
-    	    Length = 20; Width = 20;
-            Board = new Boxes [Length][Width];
-	    for (int x = 0; x < Board.length ; x++){
-		 for (int y = 0 ; y < Board[x].length ; y++){
-			Board[x][y] = new Boxes();
-		 }
-		 if (x % 2 == 0){
-		     Board[x][0].getTerrain().changeFactory("Blue");
-		 }
-		 else{
-		     Board[x][0].getTerrain().changeFactory("Red");	
-		 }
+    	Length = 20; Width = 20;
+        Board = new Boxes [Length][Width];
+	for (int x = 0; x < Board.length ; x++){
+	    for (int y = 0 ; y < Board[x].length ; y++){
+		Board[x][y] = new Boxes();
 	    }
-	    Board[10][12].getTerrain().changeHeadquarters("Red");
-	    Board[12][10].getTerrain().changeHeadquarters("Blue");
-    	}
+	}
     }
-    	if (c == 2){
-    	    this();	
-    	}
-    public boolean hasHQ(String x){
+    Grid(String fill){
+	Length = 11; Width = 25;
+	Board = new Boxes[Width][Length];
+	for (int x = 0; x < Board.length ; x++){
+	    for (int y = 0; y < Board[x].length; y++){
+		Board[x][y] = new Boxes();
+		Board[x][y].Floor.
+    }	
+    public boolean hasHQ(String side){
 	for (int x = 0; x < Board.length ; x++){
 	    for (int y = 0 ; y < Board[x].length ; y++){
 	    	Terrain a = Board[x][y].getTerrain(); 
-		if (a.getname.equals("HQ    ") && a.getside.equals(x)){
+		if (a.getname().equals("HQ    ") && a.getside().equals(side)){
 			return true;
 		} 
 	    }
 	}
 	return false;	
     }
-    public boolean hasnounits(String x){
+    public boolean hasnounits(String side){
 	for (int x = 0; x < Board.length ; x++){
 	    for (int y = 0 ; y < Board[x].length ; y++){
-		if (Board[x][y].getUnit != Null){
-		    return false;
+		if (Board[x][y].getUnit() != null){
+		    if (Board[x][y].Fodder.side.equals(side))
+			return false;
 		}
 	    }
 	}
@@ -222,7 +218,7 @@ public class Grid {
 	}
     }
     public void capture (Unit x){
-    	if (x.gettiretype() == "Foot"){
+    	if (x.gettiretype() == "Foot" || x.name.equals("Bike  ")){
     		int xcoor = x.getxcoord();
     		int ycoor = x.getycoord();
     		Board[xcoor][ycoor].getTerrain().setcapturerate(Board[xcoor][ycoor].getTerrain().getcapturerate() - 1);
@@ -345,13 +341,13 @@ public class Grid {
         String all = "";
         for (int x = 0; x < Board.length ; x++){
 	    for (int y = 0 ; y < Board[x].length ; y++){
-		all += Board[y][x].Floor + " ";
+		all += Board[x][y].Floor + " ";
 	    }
 	    all = all.substring(0,all.length()-1);
 	    all += "\n";
 	    for (int z = 0 ; z < Board[x].length ; z++){
-		if (Board[z][x].Fodder != null)
-		    all += Board[z][x].Fodder + " ";
+		if (Board[x][z].Fodder != null)
+		    all += Board[x][z].Fodder + " ";
 		else
 		    all += "      ";
 	    }
