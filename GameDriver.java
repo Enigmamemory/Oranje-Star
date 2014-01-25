@@ -76,7 +76,6 @@ public class GameDriver{
 
 	//begin actions one can take:
 	while (current.equals(side)){
-	    System.out.println(Field);
 	    Field.setDefaultMove();
 	    System.out.println("Pass turn? Type yes or no");
 	    try {
@@ -108,6 +107,7 @@ public class GameDriver{
 	    }
 	    else {
 		if (endturn.equals("no")){
+		    System.out.println(Field);
 		    System.out.println("Choose x coordinate:");
 		    try {
 			xgiven = Integer.parseInt(in.readLine());
@@ -189,11 +189,11 @@ public class GameDriver{
 						    System.out.println("ycor given does not fit in the map.");
 						}
 						else{
-						    if (Field.Board[xattack][yattack].Fodder != null && Field.Board[xattack][yattack].Fodder.side != selected.side){
-							Unit target = Field.Board[xattack][yattack].Fodder;
+						    if (Field.Board[yattack][xattack].Fodder != null && Field.Board[yattack][xattack].Fodder.side != selected.side){
+							Unit target = Field.Board[yattack][xattack].Fodder;
 							System.out.println(selected.getUnit() + " attacks " + target.getUnit());
 							Field.attack(selected,target);
-							if (Field.Board[xattack][yattack].Fodder != null){
+							if (Field.Board[yattack][xattack].Fodder != null){
 							    System.out.println(target.getUnit() + " attacks " + selected.getUnit());  
 							    Field.attack(target,selected);
 							}
@@ -207,9 +207,9 @@ public class GameDriver{
 				    }
 				    else {
 					if (choice == 3){
-					    if (Field.Board[xgiven][ygiven].Floor.candeploy == true){
-						if (!Field.Board[xgiven][ygiven].Floor.side.equals(current)){
-						    Field.capture(Field.Board[xgiven][ygiven].Fodder);
+					    if (Field.Board[ygiven][xgiven].Floor.cancapture == true){
+						if (!Field.Board[ygiven][xgiven].Floor.side.equals(current)){
+						    Field.capture(Field.Board[ygiven][xgiven].Fodder);
 						}
 						else
 						    System.out.println("You already control this building.");
