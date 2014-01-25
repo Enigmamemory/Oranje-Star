@@ -211,7 +211,101 @@ public class Grid {
 	else
 	    System.out.println("Terrain cannot deploy units");
     }
-
+    public void spawnfact(int money, int x, int y, int z){
+	if (Board[x][y].getTerrain().getname().equals("Fctory")){
+	    if (z < 1 || z > 12){
+		System.out.println("Enter a number that represents a unit.");
+	    }
+	    if (z == 1){
+		Unit a = new Unit();
+		a.changeInfantry();
+		deploy(money, a, x, y);
+	    }
+	    if (z == 2){
+		Unit a = new Unit();
+		a.changeMech();
+		deploy(money, a, x, y);
+	    }
+	    if (z == 3){
+		Unit a = new Unit();
+		a.changeBike();
+		deploy(money, a, x, y);
+	    }
+	    if (z == 4){
+		Unit a = new Unit();
+		a.changeRecon();
+		deploy(money, a, x, y);
+	    }
+	    if (z == 5){
+		Unit a = new Unit();
+		a.changeAntiAirTank();
+		deploy(money, a, x, y);
+	    } 
+	    if (z == 6){
+		Unit a = new Unit();
+		a.changeLightTank();
+		deploy(money, a, x, y);
+	    }
+	    if (z == 7){
+		Unit a = new Unit();
+		a.changeMediumTank();
+		deploy(money, a, x, y);
+	    }
+	    if (z == 8){
+		Unit a = new Unit();
+		a.changeWarTank();
+		deploy(money, a, x, y);
+	    }
+	    if (z == 9){
+		Unit a = new Unit();
+		a.changeArtillery();
+		deploy(money, a, x, y);
+	    }
+	    if (z == 10){
+		Unit a = new Unit();
+		a.changeAntiTank();
+		deploy(money, a, x, y);
+	    }
+	    if (z == 11){
+		Unit a = new Unit();
+		a.changeRocketLauncher();
+		deploy(money, a, x, y);
+	    }
+	    if (z == 12){
+		Unit a = new Unit();
+		a.AntiAirMissileLauncher();
+		deploy(money, a, x, y);
+	    }
+	}
+    }
+    public void spawnair(int money, int x, int y, int z){
+	if (Board[x][y].getTerrain().getname().equals("AirPrt")){
+	    if (z < 1 || z > 4){
+		System.out.println("Enter a number that represents a unit.");
+	    }
+	    if (z == 1){
+		Unit a = new Unit();
+		a.changeFighter();
+		deploy(money, a, x, y);
+	    }
+	    if (z == 2){
+		Unit a = new Unit();
+		a.changeBomber();
+		deploy(money, a, x, y);
+	    }
+	    if (z == 3){
+		Unit a = new Unit();
+		a.changeDuster();
+		deploy(money, a, x, y);
+	    }
+	    if (z == 4){
+		Unit a = new Unit();
+		a.changeBattleHelicopter();
+		deploy(money, a, x, y);
+	    }
+	}
+    }
+    
     public String toString() {
         String all = "";
         for (int x = 0; x < Board.length ; x++){
