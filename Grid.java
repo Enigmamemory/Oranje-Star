@@ -243,7 +243,7 @@ public class Grid {
 	}
     }
     public void capture (Unit x){
-    	if (x.gettiretype() == "Foot" || x.name.equals("Bike  ")){
+    	if (x.gettiretype().equals("Foot") || x.name.equals("Bike  ")){
 	    int xcoor = x.getxcoord();
 	    int ycoor = x.getycoord();
 	    if (Board[xcoor][ycoor].getTerrain().cancapture == true && Board[xcoor][ycoor].getTerrain().side != (x.side)){
