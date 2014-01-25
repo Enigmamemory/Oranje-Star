@@ -9,6 +9,7 @@ public class Terrain {
     protected int movetakeair;
     protected int movetaketire;
     protected int money;
+    protected boolean cancapture = false;
     
     Terrain(){
     	name = "Plain ";
@@ -27,6 +28,7 @@ public class Terrain {
     public void changeAirport(String x){
     	name = "AirPrt"; candeploy = true; side = x;defenseinc = 3;
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1000;
+    	cancapture = true;
     }
     public void changeBridge(String x){
     	name = "Bridge"; candeploy = false; side = x;defenseinc = 0;
@@ -35,22 +37,27 @@ public class Terrain {
     public void changeCity(String x){
     	name = "City  "; candeploy = false; side = x;defenseinc = 2;
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1000;
+    	cancapture = true;
     }
     public void changeCommTower(String x){
     	name = "ComTwr"; candeploy = false; side = x;defenseinc = 3;
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1000;
+    	cancapture = true;
     }
     public void changeFactory(String x){
     	name = "Fctory"; candeploy = true; side = x;defenseinc = 3;
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1000;
+    	cancapture = true;
     }
     public void changeHeadquarter(String x){
     	name = "HQ    "; candeploy = false; side = x;defenseinc = 4;
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1000;
+    	cancapture = true;
     }    
     public void changeMissileSilo(String x){
     	name = "MislSl"; candeploy = false; side = x;defenseinc = 2;
     	movetakefoot = 1;movetaketank = 1;movetakeair = 1;movetaketire = 1; money = 1000;
+    	cancapture = true;
     }
     public void changeMountain(String x){
     	name = "Mntain"; candeploy = false; side = x;defenseinc = 4;
