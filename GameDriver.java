@@ -125,10 +125,9 @@ public class GameDriver{
 			    System.out.println("ycor given does not fit in the map.");
 			}
 			else {
-			    System.out.println(Field);
 			    System.out.println(Field.Status(xgiven,ygiven));
-			    if (Field.Board[xgiven][ygiven].Fodder != null) {
-				Unit selected = Field.Board[xgiven][ygiven].Fodder;
+			    if (Field.Board[ygiven][xgiven].Fodder != null) {
+				Unit selected = Field.Board[ygiven][xgiven].Fodder;
 				int choice = 0;
 				System.out.println("Move unit, attack with unit, or capture with unit? Type 1 to move, 2 to attack, 3 to capture.");
 				try {
@@ -225,7 +224,7 @@ public class GameDriver{
 				}
 			    }
 			    else {
-				if (Field.Board[xgiven][ygiven].Floor.candeploy == true && Field.Board[xgiven][ygiven].Floor.side.equals(current)){
+				if (Field.Board[ygiven][xgiven].Floor.candeploy == true && Field.Board[ygiven][xgiven].Floor.side.equals(current)){
 				    String deployment = "";
 				    System.out.println("Deploy unit? Type yes to deploy");
 				    try {

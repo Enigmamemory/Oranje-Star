@@ -104,9 +104,9 @@ public class Grid {
     public String Status(int x, int y){
     	String all = "";
     	all += "Terrain: ";
-    	all += Board[x][y].Floor.getname();
-	if (Board[x][y].Fodder != null)
-	    all += Board[x][y].Fodder.getInfo();
+    	all += Board[y][x].Floor.getname();
+	if (Board[y][x].Fodder != null)
+	    all += Board[y][x].Fodder.getInfo();
 	else
 	    all += "\n";
     	return all;
