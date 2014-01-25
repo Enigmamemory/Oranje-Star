@@ -104,7 +104,7 @@ public class Grid {
     public String Status(int x, int y){
     	String all = "";
     	all += "Terrain: ";
-    	all += Board[y][x].Floor.getname();
+    	all += Board[y][x].Floor.getname() + "\n";
 	if (Board[y][x].Fodder != null)
 	    all += Board[y][x].Fodder.getInfo();
 	else
@@ -248,8 +248,9 @@ public class Grid {
 	    int ycoor = x.getycoord();
 	    if (Board[xcoor][ycoor].getTerrain().cancapture == true && Board[xcoor][ycoor].getTerrain().side != (x.side)){
     		Board[xcoor][ycoor].getTerrain().setcapturerate(Board[xcoor][ycoor].getTerrain().getcapturerate() - 1);
-    		if (Board[xcoor][ycoor].getcapturerate() == 0){
-    			Board[xcoor][ycoor].setside(x.getside());
+    		if (Board[xcoor][ycoor].Floor.getcapturerate() == 0){
+    			Board[xcoor][ycoor].Floor.setside(x.side);
+			Board[xcoor][ycoor].Floor.setcapturerate(20);
     		}
 	    }
 	    else
