@@ -76,7 +76,6 @@ public class GameDriver{
 
 	//begin actions one can take:
 	while (current.equals(side)){
-	    Field.setDefaultMove();
 	    System.out.println("Pass turn? Type yes or no");
 	    try {
 		endturn = in.readLine();
@@ -304,6 +303,7 @@ public class GameDriver{
 	Grid Field = new Grid("blargh");
 
 	while (gameOver != true){
+	    Field.setDefaultMove();	
 	    playTurn(Field);
 	}
 
