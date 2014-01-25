@@ -248,6 +248,9 @@ public class Grid {
 	    int ycoor = x.getycoord();
 	    if (Board[xcoor][ycoor].getTerrain().cancapture == true && Board[xcoor][ycoor].getTerrain().side != (x.side)){
     		Board[xcoor][ycoor].getTerrain().setcapturerate(Board[xcoor][ycoor].getTerrain().getcapturerate() - 1);
+    		if (Board[xcoor][ycoor].getcapturerate() == 0){
+    			Board[xcoor][ycoor].setside(x.getside());
+    		}
 	    }
 	    else
 		System.out.println("This terrain cannot be captured");
