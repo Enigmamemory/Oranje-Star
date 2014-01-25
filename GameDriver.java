@@ -76,6 +76,8 @@ public class GameDriver{
 
 	//begin actions one can take:
 	while (current.equals(side)){
+	    System.out.println("Red $: " + redmoney);
+	    System.out.println("Blue $ : " + bluemoney);
 	    System.out.println("Pass turn? Type yes or no");
 	    try {
 		endturn = in.readLine();
