@@ -22,14 +22,27 @@ public class Grid {
 	}
     }
     Grid(int c){
-    	Length = 20; Width = 20;
-        Board = new Boxes [Length][Width];
-	for (int x = 0; x < Board.length ; x++){
-	    for (int y = 0 ; y < Board[x].length ; y++){
-		Board[x][y] = new Boxes();
+    	if (c == 1){
+    	    Length = 20; Width = 20;
+            Board = new Boxes [Length][Width];
+	    for (int x = 0; x < Board.length ; x++){
+		 for (int y = 0 ; y < Board[x].length ; y++){
+			Board[x][y] = new Boxes();
+		 }
+		 if (x % 2 == 0){
+		     Board[x][0].getTerrain().changeFactory("Blue");
+		 }
+		 else{
+		     Board[x][0].getTerrain().changeFactory("Red");	
+		 }
 	    }
-	}
+	    Board[10][12].getTerrain().changeHeadquarters("Red");
+	    Board[12][10].getTerrain().changeHeadquarters("Blue");
+    	}
     }
+    	if (c == 2){
+    	    this();	
+    	}
     public boolean hasHQ(String x){
 	for (int x = 0; x < Board.length ; x++){
 	    for (int y = 0 ; y < Board[x].length ; y++){
