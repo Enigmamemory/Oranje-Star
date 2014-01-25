@@ -247,7 +247,7 @@ public class Grid {
 	    int xcoor = x.getxcoord();
 	    int ycoor = x.getycoord();
 	    if (Board[xcoor][ycoor].getTerrain().cancapture == true && Board[xcoor][ycoor].getTerrain().side != (x.side)){
-    		Board[xcoor][ycoor].getTerrain().setcapturerate(Board[xcoor][ycoor].getTerrain().getcapturerate() - 1);
+    		Board[xcoor][ycoor].getTerrain().setcapturerate(Board[xcoor][ycoor].getTerrain().getcapturerate() - x.getHP();
     		if (Board[xcoor][ycoor].Floor.getcapturerate() == 0){
     			Board[xcoor][ycoor].Floor.setside(x.side);
 			Board[xcoor][ycoor].Floor.setcapturerate(20);
