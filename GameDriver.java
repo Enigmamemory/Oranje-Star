@@ -208,6 +208,10 @@ public class GameDriver{
 						choose = Integer.parseInt(in.readLine());
 					    }
 					    catch(IOException e){}
+					    if (current.equals("Red"))
+						Field.spawnfact(redmoney, xgiven, ygiven, choose);
+					    if (current.equals("Blue"))
+						Field.spawnfact(bluemoney, xgiven, ygiven, choose);
 					}
 					if (Field.Board[xgiven][ygiven].Floor.getname().equals("AirPrt")){
 					    buy += "1. Fighter - 20000\n";
@@ -219,6 +223,10 @@ public class GameDriver{
 						choose = Integer.parseInt(in.readLine());
 					    }
 					    catch(IOException e){}
+					    if (current.equals("Red"))
+						Field.spawnair(redmoney, xgiven, ygiven, choose);
+					    if (current.equals("Blue"))
+						Field.spawnair(bluemoney, xgiven, ygiven, choose);
 					}
 				    }   
 				}
