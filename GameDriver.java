@@ -18,6 +18,10 @@ public class GameDriver{
     private static int redmoney;
     private static int bluemoney;
 
+    //keeps track of defeat
+    private static boolean redlose;
+    private static boolean bluelose;
+
     public GameDriver(){
 	turn = 1;
 	gameOver = false;
@@ -26,9 +30,33 @@ public class GameDriver{
 	side = "Red";
 	redmoney = 1000;
 	bluemoney = 1000;
+	newGame();
     }
 
     //-----------Methods--------------
+
+    public static void newGame(){
+
+	int start = 0;
+	String intro = "Welcome to Summoner's Rif - I mean, the glorious battlefield of Advance Wars!\n\n";
+	intro += "We're still experiencing technical difficulties,\n";
+	intro += "so the only option we can change to your needs is the starting monies \n";
+	intro += "between the two sides. Enter your desired starting value here:";
+	System.out.println(intro);
+	try{
+	    start = Integer.parseInt(in.readLine());
+	}
+	catch(IOException e){};
+	if (start >= 0){
+	    System.out.println("Alright, let's get this game started.");
+	    redmoney = start;
+	    bluemoney = start;
+	}
+	else {
+	    System.out.println("Eh? What's this? No matter, we already have default start for you.");
+	}
+    }
+	    
 
     public static void playTurn(Grid Field) {
 
@@ -40,6 +68,7 @@ public class GameDriver{
 	//state what # turn it is and which side is in control.
 	System.out.println("It is turn " + turn + ". " + current + "'s turn.");
 
+	//Each turn, the side gets money equal to 1000 x the number of buildings they control.
         if (side.equals("Red"))
 	    redmoney += Field.turngain("Red");
 	else
@@ -53,12 +82,28 @@ public class GameDriver{
 		endturn = in.readLine();
 	    }
 	    catch(IOException e){}
+	    //Only way to exit loop: This changes the side, rendering the while useless.
+	    //This also makes it the prime site to declare victory conditions.
 	    if (endturn.equals("yes")) {
 		System.out.println(current + " passes turn");
 		if (current.equals("blue")){
 		    turn += 1;
 		}
 		pass();
+		if (!Field.hasHQ(current)){
+		    if (current.equals("Red"))
+			redlose = true;
+		    if (current.equals("Blue"))
+			bluelose = true;
+		    gameOver = true;
+		}
+		if (Field.hasnounits(current) && turn >= 5){
+		    if (current.equals("Red"))
+			redlose = true;
+		    if (current.equals("Blue"))
+			bluelose = true;
+		    gameOver = true;
+		}
 	    }
 	    else {
 		if (endturn.equals("no")){
@@ -256,12 +301,19 @@ public class GameDriver{
 
 	GameDriver game = new GameDriver();
 	
-	Grid Field = new Grid(10,10);
+	Grid Field = new Grid("blargh");
 
 	while (gameOver != true){
 	    playTurn(Field);
-	    if (side.equals("Red"))
-		gameOver = true;
+	}
+
+	if (redlose == true && bluelose == true)
+	    System.out.println("Oh, dear...you must've tried to make this a draw.");
+	else{
+	    if (redlose == true)
+		System.out.println("Blue wins!");
+	    if (bluelose == true)
+		System.out.println("Red wins!");
 	}
 
 	System.out.println("Everything seems to be working");
