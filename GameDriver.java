@@ -77,6 +77,7 @@ public class GameDriver{
 	//begin actions one can take:
 	while (current.equals(side)){
 	    System.out.println(Field);
+	    Field.setDefaultMove();
 	    System.out.println("Pass turn? Type yes or no");
 	    try {
 		endturn = in.readLine();
@@ -234,7 +235,7 @@ public class GameDriver{
 				    if (deployment.equals("yes")){
 					int choose = 0;
 					String buy = "Type the number corresponding to the unit to deploy it.\n";
-					if (Field.Board[xgiven][ygiven].Floor.getname().equals("Fctory")){
+					if (Field.Board[ygiven][xgiven].Floor.getname().equals("Fctory")){
 					    buy += "1. Infantry - 1500\n";
 					    buy += "2. Mech - 2500\n";
 					    buy += "3. Bike - 2500\n";
@@ -253,11 +254,11 @@ public class GameDriver{
 					    }
 					    catch(IOException e){}
 					    if (current.equals("Red"))
-						Field.spawnfact(redmoney, xgiven, ygiven, choose);
+						Field.spawnfact(redmoney, ygiven, xgiven, choose);
 					    if (current.equals("Blue"))
-						Field.spawnfact(bluemoney, xgiven, ygiven, choose);
+						Field.spawnfact(bluemoney, ygiven, xgiven, choose);
 					}
-					if (Field.Board[xgiven][ygiven].Floor.getname().equals("AirPrt")){
+					if (Field.Board[ygiven][xgiven].Floor.getname().equals("AirPrt")){
 					    buy += "1. Fighter - 20000\n";
 					    buy += "2. Bomber - 20000\n";
 					    buy += "3. Duster - 13000\n";
