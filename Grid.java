@@ -246,7 +246,7 @@ public class Grid {
     	if (x.gettiretype() == "Foot" || x.name.equals("Bike  ")){
 	    int xcoor = x.getxcoord();
 	    int ycoor = x.getycoord();
-	    if (Board[xcoor][ycoor].getTerrain().cancapture == true && !Board[xcoor][ycoor].getTerrain().side.equals(x.side)){
+	    if (Board[xcoor][ycoor].getTerrain().cancapture == true && Board[xcoor][ycoor].getTerrain().side != (x.side)){
     		Board[xcoor][ycoor].getTerrain().setcapturerate(Board[xcoor][ycoor].getTerrain().getcapturerate() - 1);
 	    }
 	    else
@@ -378,7 +378,7 @@ public class Grid {
 		if (Board[x][z].Fodder != null)
 		    all += Board[x][z].Fodder + " ";
 		else
-		    all += "      ";
+		    all += "       ";
 	    }
 	    all = all.substring(0,all.length()-1);
 	    all += "\n";
