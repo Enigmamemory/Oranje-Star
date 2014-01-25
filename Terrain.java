@@ -120,6 +120,9 @@ public class Terrain {
     public String getside(){
     	return side;
     }
+    public void setside(String x){
+    	side = x;
+    }
     public void setcapturerate(int x){
     	capturerate = x;
     }
