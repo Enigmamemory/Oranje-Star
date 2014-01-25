@@ -106,7 +106,10 @@ public class Terrain {
 	candeploy = x;
     }
     public String toString(){
-	return getname();
+    	String all = "";
+    	all += "Terrain: " + name + "\n";all += "Player: " + side + "  ";all += "Capture: " + capturerate + "\n";
+    	all += "DefenseIncrease: " + defenseinc + "\n";
+	return all;
     }
     public int getcapturerate(){
     	return capturerate;
