@@ -160,5 +160,8 @@ public class Unit{
     public String toString(){
 	return getUnit();
     }
+    public void setside(String x){
+	side = x;
+    }
     
 }
