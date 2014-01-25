@@ -119,6 +119,13 @@ public class Grid {
 	    }
 	}
     }
+    public void setMovedFalse(){
+	for (int x = 0; x< Board.length ; x++){
+	    for (int y = 0 ; y < Board[x].length ; y++){
+		Board[x][y].Fodder.setmoved(false);
+	    }
+	}
+    }
     public void moveup (Unit x){
 	int xcoor = x.getxcoord();
 	int ycoor = x.getycoord();
@@ -246,11 +253,16 @@ public class Grid {
 	    int xcoor = x.getxcoord();
 	    int ycoor = x.getycoord();
 	    if (Board[xcoor][ycoor].getTerrain().cancapture == true && Board[xcoor][ycoor].getTerrain().side != (x.side)){
-    		Board[xcoor][ycoor].getTerrain().setcapturerate(Board[xcoor][ycoor].getTerrain().getcapturerate() - x.getHP());
-    		if (Board[xcoor][ycoor].Floor.getcapturerate() == 0){
+		if (x.moved == false){
+		    Board[xcoor][ycoor].getTerrain().setcapturerate(Board[xcoor][ycoor].getTerrain().getcapturerate() - x.getHP());
+		    x.setmoved(true);
+		    if (Board[xcoor][ycoor].Floor.getcapturerate() == 0){
     			Board[xcoor][ycoor].Floor.setside(x.side);
 			Board[xcoor][ycoor].Floor.setcapturerate(20);
-    		}
+		    }
+		}
+		else
+		    System.out.println("This unit already did something.");
 	    }
 	    else
 		System.out.println("This terrain cannot be captured");
@@ -263,8 +275,10 @@ public class Grid {
     public void deploy (int money, Unit guy, int x, int y){
 	if (Board[x][y].Floor.candeploy == true){
 	    if (Board[x][y].Fodder == null){
-		if (guy.cost < money)
+		if (guy.cost < money){
 		    Place(guy,x,y);
+		    guy.setmovespace(0);
+		}
 		else
 		    System.out.println("Don't have enough money to deploy this unit");
 	    }
