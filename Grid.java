@@ -278,6 +278,7 @@ public class Grid {
 		if (guy.cost < money){
 		    Place(guy,x,y);
 		    guy.setmovespace(0);
+		    guy.setside(Board[x][y].Floor.side);
 		}
 		else
 		    System.out.println("Don't have enough money to deploy this unit");
