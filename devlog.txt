@@ -1,0 +1,148 @@
+1/13/14
+-Finally got the repo to work on Alex's cpu
+-Uploaded Boxes.java and Grid.java. Looking back now at 1/24/14, this was the beginning of something spectacular.
+-Worked on Boxes.java and Grid.java, got some basic groundwork going.
+-Uploaded Terrain.java
+-Deleted Alex's test file for uploading - we didn't need it any more.
+
+Man hours: 1.5
+Total: 1.5
+
+1/14/14
+-Uploaded Unit.java
+-Uploaded Driver.java
+-Continued laying down basics for Boxes and Grid.
+
+Man hours: 1.5
+Total: 3
+
+1/15/14
+-Considered  using subclasses to differ between Units - this idea was ultimately scrapped.
+-More general work - we're going really slowly.
+
+Man hours: 1.5
+Total: 4.5
+
+1/16/14
+-Uploaded a bunch of unnecessary files because what is repo.
+-Mass upload sucks because the comments made no sense outside of a certain context.
+
+Man hours: 2
+Total: 6.5
+
+1/17/14
+-Made toString for Grid that would ultimately be our interface of sorts for our game.
+-Officially scrapped Infantry.java
+
+Man hours: 1.5
+Total: 8
+
+1/19/14
+-Began attempting to move Units in Grid.
+-Much frustration experienced
+-Alex got absolutely nowhere with GUI research
+
+Man hours: 7(?)
+Total: 15
+
+1/20/14
+-MLK day, time to panic.
+-Alex finds better GUI tutorial
+-He still gets nowhere.
+-Uploaded failed GUI stuff.
+-Chris: "PLS BELIEVEEEEEEEEEEE"
+-Alex asks Based God Topher Brown Mykolyk for an extension
+-Goes to bed panicking on the inside.
+
+Man hours: 12(?)
+Total: 27
+
+1/21/14
+-THANK YOU BASED GOD TOPHER BROWN MYKOLYK
+-Chris worked on stuff but never saved it, so. We knew the issues were there though.
+
+Man hours: 1.5
+Total:28.5
+
+1/22/14
+-No Chris, why the heck would you bet on a snow day, watrudoing.
+-Hell Week in-class final stress.
+-Mild updates in files.
+-Fixed coordinate problem - real whoozy.
+-Alex works on targeting - SCRAPPED.
+
+Man hours: 4(?)
+Total: 32.5
+
+1/23/14
+-It's Thursday. We're just about finished with exams. TIME TO GO FOR THE GUSTO
+-We go hardcore. Real hardcore.
+-Made official GameDriver.java file - based off the stuff from YoRPG.
+-My god, we are racing through this.
+-Chris, stop mixing up function and variable names, and test your code dammit.
+-BELIEVEEEEEEEEEEEEE
+
+Man hours: 12
+Total: 44.5
+
+1/24/14
+-So we're doing exactly what Based God told us not to do - work in the middle of the night.
+-Chris kinda faints at around 3
+-GameDriver.java got a lot of beef, but we're not quite done yet.
+-Alex is typing up the devlog using what he remembers and the github history.
+-We're probably going to have to take a late, but at least we're almost there. Made brilliant progress the last 9 or so hours.
+
+Man hours: 7
+Total: 51.5
+
+1/24/14 (Morning)
+
+- My god everyone finished. WE LOOK SO STUPID NOW ;A;
+- And...our code has an inherent problem that prevented us from making rectangles.
+- Man, this error is screwing with us SO bad... We have to switch our x/y in the arrays a large number of times.
+- Chris has an SAT tmm, we call it quits at around 12:30.
+
+Man hours: 8
+Total: 59.5
+
+1/25/14
+
+- We finalize and shore up the remainder of all our problems as we know it.
+- I guess it's time to finish this once and for all. Sorry for the lateness sir :(
+
+Man hours: 6
+
+Total: 65.5
+
+Obstacles overcome:
+
+- ALL THE BUGS. ALL OF THEM. WHY. If I had to describe all of them, we'll be talking here all day.
+- The incredible progress we made on Thursday in particular.
+- Managing to make a working terminal interface (Used YoRPG as a basis).
+
+Unresolved issues:
+
+- What is GUI. Hah. Hah. Hah.
+- Never got to make an actual map. It's time we handed this in, but I regret this.
+- The balancing for this game is all off. It couldn't be helped, but if this game was actually played, so many things are gamebreaking.
+- In the driver, the difference between parseInt and simply in.readLine() may cause exception errors at different points from different things.
+- This interface is cumbersome to use.
+
+Cool Stuff learned:
+
+- Making a working interactive Driver (Much better than my first attempt - Alex)
+- Some stuff on GUIs
+- Perservation
+- BELIEVEEEEEEEEEEE
+
+Mid-development changes:
+
+- We had to drop the GUI, first and foremost.
+- There were some more mild changes which all contributed to making the interface extremely manual.
+
+Lessons learned:
+
+- No, Chris, you NEVER try to bank on a snow day. What were you thinking? -_-
+- Working on a GUI during the weekend? BAD IDEA DUDE. BAD IDEA.
+- This isn't sophomore year, we don't have a million years and beyond to do this project.
+- Handing things in late when everyone elses handed it in on time feels awful.
