@@ -30,6 +30,28 @@ public class Grid {
 	    }
 	}
     }
+    public boolean hasHQ(String x){
+	for (int x = 0; x < Board.length ; x++){
+	    for (int y = 0 ; y < Board[x].length ; y++){
+	    	Terrain a = Board[x][y].getTerrain(); 
+		if (a.getname.equals("HQ    ") && a.getside.equals(x)){
+			return true;
+		} 
+	    }
+	}
+	return false;	
+    }
+    public boolean hasnounits(String x){
+	for (int x = 0; x < Board.length ; x++){
+	    for (int y = 0 ; y < Board[x].length ; y++){
+		if (Board[x][y].getUnit != Null){
+		    return false;
+		}
+	    }
+	}
+	return true;
+    }   
+    	
     public void Place(Unit a, int x, int y) {
 	Board[x][y].Fodder = a;
 	a.setxcoord(x);a.setycoord(y);
