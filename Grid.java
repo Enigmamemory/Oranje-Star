@@ -36,12 +36,37 @@ public class Grid {
 	for (int x = 0; x < Board.length ; x++){
 	    for (int y = 0; y < Board[x].length; y++){
 		Board[x][y] = new Boxes();
-		Board[x][y].Floor.
+		Board[x][y].Floor.changePlain();
+	    }
+	}
+	Board[0][4].Floor.changeCity("Blue");
+	Board[0][6].Floor.changeCity("Blue");
+	Board[24][4].Floor.changeCity("Red");
+	Board[24][6].Floor.changeCity("Red");
+	Board[3][2].Floor.changeCity("Neutral");
+	Board[3][8].Floor.changeCity("Neutral");
+	Board[21][2].Floor.changeCity("Neutral");
+	Board[21][8].Floor.changeCity("Neutral");
+	Board[7][10].Floor.changeCity("Neutral");
+	Board[11][0].Floor.changeCity("Neutral");
+	Board[11][4].Floor.changeCity("Neutral");
+	Board[13][4].Floor.changeCity("Neutral");
+	Board[11][6].Floor.changeCity("Neutral");
+	Board[13][4].Floor.changeCity("Neutral");
+	Board[1][3].Floor.changeFactory("Blue");
+	Board[1][7].Floor.changeFactory("Blue");
+	Board[23][3].Floor.changeFactory("Red");
+	Board[23][7].Floor.changeFactory("Red");
+	Board[8][5].Floor.changeFactory("Neutral");
+	Board[16][5].Floor.changeFactory("Neutral");
+	Board[13][5].Floor.changeAirport("Neutral");
+	Board[0][5].Floor.changeHeadquarter("Blue");
+	Board[24][5].Floor.changeHeadquarter("Red");
     }	
     public boolean hasHQ(String side){
 	for (int x = 0; x < Board.length ; x++){
 	    for (int y = 0 ; y < Board[x].length ; y++){
-	    	Terrain a = Board[x][y].getTerrain(); 
+	    	Terrain a = Board[x][y].Floor; 
 		if (a.getname().equals("HQ    ") && a.getside().equals(side)){
 			return true;
 		} 
@@ -219,9 +244,13 @@ public class Grid {
     }
     public void capture (Unit x){
     	if (x.gettiretype() == "Foot" || x.name.equals("Bike  ")){
-    		int xcoor = x.getxcoord();
-    		int ycoor = x.getycoord();
+	    int xcoor = x.getxcoord();
+	    int ycoor = x.getycoord();
+	    if (Board[xcoor][ycoor].getTerrain().cancapture == true && !Board[xcoor][ycoor].getTerrain().side.equals(x.side)){
     		Board[xcoor][ycoor].getTerrain().setcapturerate(Board[xcoor][ycoor].getTerrain().getcapturerate() - 1);
+	    }
+	    else
+		System.out.println("This terrain cannot be captured");
     	}
     	else {
     		System.out.println("Only Footmen can capture stuff");
