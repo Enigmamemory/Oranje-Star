@@ -85,7 +85,7 @@ public class GameDriver{
 	    //This also makes it the prime site to declare victory conditions.
 	    if (endturn.equals("yes")) {
 		System.out.println(current + " passes turn");
-		if (current.equals("blue")){
+		if (current.equals("Blue")){
 		    turn += 1;
 		}
 		pass();
@@ -303,7 +303,8 @@ public class GameDriver{
 	Grid Field = new Grid("blargh");
 
 	while (gameOver != true){
-	    Field.setDefaultMove();	
+	    Field.setDefaultMove();
+	    Field.setMovedFalse();
 	    playTurn(Field);
 	}
 
